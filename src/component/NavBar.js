@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const NavBar = () => {
+const NavBar = ({LogIn}) => {
   return (
     <div className="navbar">
         <div className="navbar-company-name">
@@ -26,13 +26,14 @@ const NavBar = () => {
         >
             About
         </NavLink>
-        <NavLink
-            to="/login"
-            exact
-            className="navbar-btn"
-        >
-            Login
-        </NavLink>
+        {LogIn ? <div></div> : 
+            <NavLink
+                to="/login"
+                exact
+                className="navbar-btn"
+                >
+                Login
+            </NavLink>}
         </div>
     </div>
   );
