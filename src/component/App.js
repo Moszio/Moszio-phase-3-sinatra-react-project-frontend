@@ -5,10 +5,13 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
+import "./App.css"
+
+
 
 const App = () => {
   return (
-    <div>
+    <div id="navbar-main-div">
       <NavBar />
       <Switch>
         <Route exact path="/about">
