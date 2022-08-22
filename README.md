@@ -1,3 +1,17 @@
+Collaboration between Andor and Agneska:
+
+Use 
+### Npm install 
+and 
+### "npm install react-router-dom@5"
+for the router to work.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
