@@ -6,6 +6,11 @@ and
 ### "npm install react-router-dom@5"
 for the router to work.
 
+### npm install react-bootstrap bootstrap
+
+Pictures sources:
+https://unsplash.com/photos/mVqTumQH-c0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+
 
 
 

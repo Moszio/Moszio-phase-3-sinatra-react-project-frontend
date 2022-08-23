@@ -2,8 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const NavBar = ({LogIn}) => {
+const NavBar = ({logIn, setLogIn, setUserName, setPassword}) => {
+
+    const logOut = () =>{
+            console.log("logout")
+            setUserName("")
+            setPassword("")
+            setLogIn(!logIn)
+    }
   return (
+    
     <div className="navbar">
         <div className="navbar-company-name">
             <p>FFS Logistic</p>
@@ -26,14 +34,28 @@ const NavBar = ({LogIn}) => {
         >
             About
         </NavLink>
-        {LogIn ? <div></div> : 
+
+        {logIn ?  
+            <>
+            <button className="navbar-btn" onClick={logOut}>Log out</button>
+            </> 
+            : 
+            <>
+            <NavLink
+                to="/signUp"
+                exact
+                className="navbar-btn"
+                >
+                Sign Up
+            </NavLink>
             <NavLink
                 to="/login"
                 exact
                 className="navbar-btn"
                 >
                 Login
-            </NavLink>}
+            </NavLink>
+            </>}
         </div>
     </div>
   );

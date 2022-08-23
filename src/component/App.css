@@ -112,3 +112,25 @@ display:flex ;
   height: 100%;
   background-color: rgb(255, 233, 206);
 }
+
+.login {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('../../public/login_pictire.jpg');
+  opacity: 0.5;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
