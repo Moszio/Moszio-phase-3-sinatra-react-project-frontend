@@ -1,14 +1,19 @@
 import Message from "./Message"
 
 
-const MessageList = ({messages}) => {
+const MessageList = ({messages, handleDeleteMessage}) => {
     return (
-        <div className="message-list">
-            <ul>
+        <div>
+            <div>
                 {messages.map((message) => {
-                   return <Message key={message.id} message={message}/>
+                   return <Message 
+                   key={message.id} 
+                   message={message} 
+                   handleDeleteMessage={handleDeleteMessage} 
+                   /*handleUpdateMessage={handleUpdateMessage}*/
+                   />
                 })}
-            </ul>
+            </div>
         </div>
     )
 }

@@ -6,7 +6,6 @@ import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Footer from './Footer'
-
 import "./App.css"
 import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
@@ -41,8 +40,8 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-
       <Footer logIn={logIn} userLogInName={userLogInName} />
+
     </>
   );
 }
