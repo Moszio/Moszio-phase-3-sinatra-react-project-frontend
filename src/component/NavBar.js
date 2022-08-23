@@ -1,21 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) => {
+    const history = useHistory()
+
+    const clickToGoToHomepage = () => {
+         history.push("/")
+    }
 
     const logOut = () =>{
             console.log("logout")
             setUserEmail("")
             setPassword("")
             setLogIn(!logIn)
+            history.push("/")
             // USER CAN LOG IN ANDOR return to home page
     }
   return (
     
     <div className="navbar">
         <div className="navbar-company-name">
-            <p>FFS Logistic</p>
+            <p onClick={clickToGoToHomepage}>FFS Logistic</p>
         </div>
         <div>
             <img src="./Logo.jpg" alt="compnay-logo" className="navbar-company-logo"/>

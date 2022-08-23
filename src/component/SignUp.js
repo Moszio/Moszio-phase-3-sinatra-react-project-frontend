@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import { useHistory } from "react-router-dom";
 
 
 const SignUp = ({setUsers, users}) => {
+
+    const history = useHistory()
+
     const[newName, setNewName]=useState('')
     const handleNewName = (e) =>{
         setNewName(e.target.value)
@@ -89,7 +92,7 @@ const SignUp = ({setUsers, users}) => {
             body: JSON.stringify(newUser)
             }).then(req=> req.json())
             .then (res => setUsers(...users, res))
-            
+            history.push("/login")
             setNewName('')
             setNewLastName('')
             setNewEmail('')

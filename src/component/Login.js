@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import SignUp from "./SignUp"
+import { useHistory } from 'react-router-dom';
 
 const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
+    const history = useHistory()
     
     const[signUpMessage, setSignUnMessage] = useState(false)
     useEffect(()=>{
@@ -31,6 +33,7 @@ const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, s
             } else {
                 setLogIn(!logIn)
                 setUserLogInName(inputUser.name)
+                history.push("/")
             }
         } else {
             setUserEmail('')
