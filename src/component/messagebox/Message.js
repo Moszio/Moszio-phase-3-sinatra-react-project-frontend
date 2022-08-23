@@ -1,17 +1,8 @@
-const Message = () => {
+const Message = (message) => {
+
+    console.log(message)
     return (
-        <div>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-            <li>MESSAGE</li>
-        </div>
+        <li>{message.message.body}</li>
     )
 }
 

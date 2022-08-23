@@ -8,16 +8,16 @@ import { useState, useEffect } from "react"
 const MessageBox = () => {
     const [messages, setMessages] = useState([])
 
-    useEffect = (() => {
-        fetch(url)
-        .then(res = res.json())
-        .then((data) = setMessages(data))
+    useEffect(() => {
+        fetch('http://localhost:9292/messages')
+        .then(req => req.json())
+        .then((res) => setMessages(res))
     }, [])
 
     return (
         <div className="chatbox-container">
             <Header />
-            <MessageList />
+            <MessageList messages={messages}/>
             <NewMessage />
         </div>
     )

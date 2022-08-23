@@ -1,11 +1,13 @@
 import Message from "./Message"
 
 
-const MessageList = () => {
+const MessageList = ({messages}) => {
     return (
         <div className="message-list">
             <ul>
-                <Message />
+                {messages.map((message) => {
+                   return <Message key={message.id} message={message}/>
+                })}
             </ul>
         </div>
     )
