@@ -9,7 +9,7 @@ import { useState } from "react"
 
 const Message = ({message, handleDeleteMessage}) => {
 
-const [updateMessage, setUpdateMessage] = useState(null);
+const [updateMessage, setUpdateMessage] = useState("");
 
   function handleFormSubmit(e) {
     e.preventDefault();
