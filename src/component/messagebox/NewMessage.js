@@ -1,8 +1,15 @@
 import { useState } from "react"
 
+/* <div className="new-message">
+        <form action="" onSubmit={postUrl}>
+            <input type="text" placeholder="message"  onChange={(e) => setMessageData(e.target.value)}/>
+            <button>Send</button>
+        </form>
+        </div>*/
+
 const NewMessage = ({ handleNewMessages }) => {
 
-    const[body, setMessageData] = useState("")
+    const[messageData, setMessageData] = useState("")
 
     let today = new Date();
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -15,7 +22,7 @@ const NewMessage = ({ handleNewMessages }) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                body: body,
+                body: messageData,
                 owner: "Andor",
                 sent_at: time
             })
@@ -29,11 +36,12 @@ const NewMessage = ({ handleNewMessages }) => {
 
 
     return (
-        <div className="new-message">
-        <form action="" onSubmit={postUrl}>
+
+        <div class="form-group px-3">
+            <form action="" onSubmit={postUrl}>
             <input type="text" placeholder="message"  onChange={(e) => setMessageData(e.target.value)}/>
             <button>Send</button>
-        </form>
+            </form>
         </div>
     )
 }
