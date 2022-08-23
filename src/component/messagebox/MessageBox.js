@@ -3,11 +3,7 @@ import Header from "./Header"
 import NewMessage from "./NewMessage"
 import "./MessageBox.css"
 import { useState, useEffect } from "react"
-/*<div className="chatbox-container">
-            <Header />
-            <MessageList messages={messages} />
-            <NewMessage handleNewMessages={handleNewMessages}/>
-        </div>*/
+
 
 const MessageBox = () => {
     const [messages, setMessages] = useState([])
@@ -28,18 +24,6 @@ const MessageBox = () => {
     const updatedMessages = messages.filter((message) => message.message.id !== id);
     setMessages(updatedMessages);
     }
-/*
-    const handleUpdateMessage = (updatedMessageObj) => {
-    const updatedMessages = messages.map((message) => {
-      if (message.id === updatedMessageObj.id) {
-        return updatedMessageObj;
-      } else {
-        return message;
-      }
-    });
-    setMessages(updatedMessages);
-    }*/
-
 
     return (
         <div className="container d-flex justify-content-center">
@@ -47,7 +31,7 @@ const MessageBox = () => {
                 <Header />
                 <MessageList 
                     messages={messages} 
-                    /*handleUpdateMessage={handleUpdateMessage} */
+                    
                     handleDeleteMessage={handleDeleteMessage}
                     />
                 <NewMessage 
