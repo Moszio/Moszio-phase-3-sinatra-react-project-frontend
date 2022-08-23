@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SignUp from "./SignUp"
 
-const Login = ({users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
+const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
     
     const[signUpMessage, setSignUnMessage] = useState(false)
     useEffect(()=>{
@@ -30,6 +30,7 @@ const Login = ({users, setUsers, setLogIn, logIn, userEmail, setUserEmail, passw
                 alert(`invalid password for ${userEmail}`)
             } else {
                 setLogIn(!logIn)
+                setUserLogInName(inputUser.name)
             }
         } else {
             setUserEmail('')

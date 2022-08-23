@@ -5,12 +5,11 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
+import Footer from './Footer'
 
 import "./App.css"
 import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
-
-
 
 
 const App = () => {
@@ -20,19 +19,19 @@ const App = () => {
   const[password, setPassword]=useState('')
   const[newUser, setNewUser]=useState(false)
   const[users, setUsers]=useState([])
-  console.log(userEmail)
-  console.log(password)
+  const[userLogInName, setUserLogInName]=useState('')
+
 
   return (
     <>
       <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
+          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} />
       <Switch>
         <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/login">
-          <Login users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
+          <Login setUserLogInName={setUserLogInName} users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
           password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
         </Route>
         <Route exact path="/signUp">
@@ -42,7 +41,8 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-      
+
+      <Footer logIn={logIn} userLogInName={userLogInName} />
     </>
   );
 }
