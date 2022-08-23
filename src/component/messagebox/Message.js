@@ -2,7 +2,11 @@ const Message = (message) => {
 
     console.log(message)
     return (
-        <li>{message.message.body}</li>
+        <div>
+            <li>{message.message.owner} {message.message.sent_at}</li>
+            <li>{message.message.body}</li>
+        </div>
+        
     )
 }
 

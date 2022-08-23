@@ -14,11 +14,18 @@ const MessageBox = () => {
         .then((res) => setMessages(res))
     }, [])
 
+
+
+    const handleNewMessages = (newMessage) => {
+    setMessages([...messages, newMessage]);
+    }
+
+
     return (
         <div className="chatbox-container">
             <Header />
-            <MessageList messages={messages}/>
-            <NewMessage />
+            <MessageList messages={messages} />
+            <NewMessage handleNewMessages={handleNewMessages}/>
         </div>
     )
 }
