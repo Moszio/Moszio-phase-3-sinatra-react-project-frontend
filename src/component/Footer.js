@@ -13,7 +13,7 @@ const Footer = ({logIn, userLogInName}) => {
             {/* Created by:  Andor / Agnes */}
             
             {logIn ? ( 
-                <BsFillChatDotsFill onClick={openChat} style={{size: '50px'}} />
+                <BsFillChatDotsFill onClick={openChat}  />
             ):(<></>)}
         </div>
     )
