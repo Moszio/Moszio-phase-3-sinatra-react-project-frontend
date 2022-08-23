@@ -16,24 +16,27 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const App = () => {
   const[logIn, setLogIn] = useState(false)
   // use state used in Login Component
-  const[userName, setUserName]=useState('')
+  const[userEmail, setUserEmail]=useState('')
   const[password, setPassword]=useState('')
   const[newUser, setNewUser]=useState(false)
+  const[users, setUsers]=useState([])
+  console.log(userEmail)
+  console.log(password)
 
   return (
     <>
-      <NavBar logIn={logIn} setLogIn={setLogIn} userName={userName} setUserName={setUserName}
+      <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
           password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
       <Switch>
         <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/login">
-          <Login setLogIn={setLogIn} logIn={logIn} userName={userName} setUserName={setUserName}
+          <Login users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
           password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
         </Route>
         <Route exact path="/signUp">
-          <SignUp />
+          <SignUp setUsers={setUsers} users={users}/>
         </Route>
         <Route exact path="/">
           <Home />

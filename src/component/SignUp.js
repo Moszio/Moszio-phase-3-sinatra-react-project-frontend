@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 
-const SignUp = () => {
+
+const SignUp = ({setUsers, users}) => {
     const[newName, setNewName]=useState('')
     const handleNewName = (e) =>{
         setNewName(e.target.value)
@@ -30,12 +31,80 @@ const SignUp = () => {
     const handlePassword2 = (e)=>{
         setPassword2(e.target.value)
     }
-    console.log(newName, newLastName, newEmail, newUserName, password1, password2)
+   
+    useEffect(()=>{
+        fetch('http://localhost:9292/users')
+        .then(req=> req.json())
+        .then(res => setUsers(res))
+    },[setUsers])
+
+    const checkPassword = (pas1, pas2) => {
+        // password1 not entered
+        if (pas1 === ''){
+            alert ("Please enter Password")
+            return false
+        } else if (pas2 === ''){
+            alert ("Please enter confirm password")
+            return false
+        } else if (pas1 !== pas2) {
+            alert ("\nPassword did not match: Please try again...")
+            return false
+        } else {
+            return true
+        }
+    }
+    // find if user is not in db already (using email)
+    const checkUserMail =() => {
+        const inputUser = users.find((user) => user.contact === newEmail)
+        if (inputUser) {
+            alert ("Address email matching addres in our database. Try to log in.")
+            return false
+        } else {
+            return true
+        }
+    }
+
 
     const handleNewUser = (e) =>{
         e.preventDefault()
         // FINISHED HERE handle submiting form
+        const passwordMatch = checkPassword(password1, password2)
+        // find if user is not in db already (using email)
+        const newUserTrue = checkUserMail()
+        // if user is new and 
+        if (passwordMatch && newUserTrue ) {
+            // new user
+            const newUser = {
+                name: newName, 
+                lastName: newLastName, 
+                contact: newEmail, 
+                login: newUserName, 
+                password: password1
+            }
+            // send fetch request POST
+            fetch('http://localhost:9292/users', {method:'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+            body: JSON.stringify(newUser)
+            }).then(req=> req.json())
+            .then (res => setUsers(...users, res))
+            
+            setNewName('')
+            setNewLastName('')
+            setNewEmail('')
+            setNewUserName('')
+            setPassword1('')
+            setPassword2('')
+
+            // send info user can log in
+            // USER CAN LOGG IN ANDOR return to log in page
+        }
+
     }
+        
+
+    
 
 
 
@@ -59,43 +128,43 @@ const SignUp = () => {
                     <form onSubmit={handleNewUser}>
                         <div className="form-floating mb-3">
                         <input type="text" className="form-control" id="floatingInput" placeholder="User Name" value={newName} onChange={handleNewName}/>
-                        <label for="floatingInput">Name</label>
+                        <label htmlFor="floatingInput">Name</label>
                         </div>
 
                         <div className="form-floating mb-3">
                         <input type="text" className="form-control" id="floatingInput" placeholder="User Name" value={newLastName} onChange={handleNewLastName}/>
-                        <label for="floatingInput">Last Name</label>
+                        <label htmlFor="floatingInput">Last Name</label>
                         </div>
 
                         <div className="form-floating mb-3">
                         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" value={newEmail} onChange={handleNewEmail}/>
-                        <label for="floatingInput">Email address</label>
+                        <label htmlFor="floatingInput">Email address</label>
                         </div>
 
                         <div className="form-floating mb-3">
                         <input type="text" className="form-control" id="floatingInput" placeholder="User Name" value={newUserName} onChange={handleNewUserName}/>
-                        <label for="floatingInput">User Name</label>
+                        <label htmlFor="floatingInput">User Name</label>
                         </div>     
 
                         <div className="form-floating mb-3">
                         <input type="password" className="form-control" id="floatingPassword" placeholder="Password" value={password1} onChange={handlePassword1}/>
-                        <label for="floatingPassword">Password</label>
+                        <label htmlFor="floatingPassword">Password</label>
                         </div>
 
                         <div className="form-floating mb-3">
                         <input type="password" className="form-control" id="floatingPassword" placeholder="Password" value={password2} onChange={handlePassword2}/>
-                        <label for="floatingPassword">Confirm Password</label>
+                        <label htmlFor="floatingPassword">Confirm Password</label>
                         </div>
 
                         <div className="form-check mb-3">
                         <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck"/>
-                        <label className="form-check-label" for="rememberPasswordCheck">
+                        <label className="form-check-label" htmlFor="rememberPasswordCheck">
                             Remember password
                         </label>
                         </div>
 
                         <div className="d-grid">
-                        <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                        <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign up</button>
                         </div>
                         
                     </form>

@@ -2,13 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const NavBar = ({logIn, setLogIn, setUserName, setPassword}) => {
+const NavBar = ({logIn, setLogIn, setUserEmail, setPassword}) => {
 
     const logOut = () =>{
             console.log("logout")
-            setUserName("")
+            setUserEmail("")
             setPassword("")
             setLogIn(!logIn)
+            // USER CAN LOGG IN ANDOR return to home page
     }
   return (
     

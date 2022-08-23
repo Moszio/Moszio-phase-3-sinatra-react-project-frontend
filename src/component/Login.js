@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import SignUp from "./SignUp"
 
-const Login = ({setLogIn, logIn, userName, setUserName, password, setPassword, newUser, setNewUser}) => {
-    const[users, setUsers]=useState({})
+const Login = ({users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
+    
     const[signUpMessage, setSignUnMessage] = useState(false)
     useEffect(()=>{
         fetch('http://localhost:9292/users')
         .then(req=> req.json())
-        .then(res =>setUsers(res))
+        .then(res => setUsers(res))
     },[])
 
     const handleUser = (e) =>{
-        setUserName(e.target.value)
+        setUserEmail(e.target.value)
     }
 
     const handlePassword =(e) =>{
@@ -20,19 +20,20 @@ const Login = ({setLogIn, logIn, userName, setUserName, password, setPassword, n
     
     const handleLoggIn = (e) =>{
         e.preventDefault()
-        console.log("workd")
-        setUserName(e.target.value)
+        console.log("user logged in")
+        setUserEmail(e.target.value)
         setPassword(e.target.value)
-        console.log(userName, password)
-        const inputUser = users.find((user) => user.login === userName)
-        console.log(inputUser)
+        const inputUser = users.find((user) => user.contact === userEmail)
         if (inputUser) {
             if (inputUser.password !== password) {
-                alert(`invalid password for ${userName}`)
+                setPassword('')
+                alert(`invalid password for ${userEmail}`)
             } else {
                 setLogIn(!logIn)
             }
         } else {
+            setUserEmail('')
+            setPassword('')
             setSignUnMessage(!signUpMessage)
         }
     }
@@ -40,7 +41,7 @@ const Login = ({setLogIn, logIn, userName, setUserName, password, setPassword, n
 
     return (
             <>
-                {logIn ? <h1>Hello {userName} vgjfgjfgjgf</h1> : (
+                {logIn ? <h1>Hello {userEmail} vgjfgjfgjgf</h1> : (
                     <>
                     <div className="container-fluid ps-md-0">
                     <div className="row g-0">
@@ -57,8 +58,8 @@ const Login = ({setLogIn, logIn, userName, setUserName, password, setPassword, n
                                 
                                 <form onSubmit={handleLoggIn}>
                                     <div className="form-floating mb-3">
-                                    <input type="text" className="form-control" id="floatingInput" placeholder="User Name" value={userName} onChange={handleUser}/>
-                                    <label htmlFor="floatingInput">User Name</label>
+                                    <input type="text" className="form-control" id="floatingInput" placeholder="User email" value={userEmail} onChange={handleUser}/>
+                                    <label htmlFor="floatingInput">Address email</label>
                                     </div>
                                     <div className="form-floating mb-3">
                                     <input type="password" className="form-control" id="floatingPassword" placeholder="Password" value={password} onChange={handlePassword}/>
@@ -67,7 +68,7 @@ const Login = ({setLogIn, logIn, userName, setUserName, password, setPassword, n
 
                                     <div className="form-check mb-3">
                                     <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck"/>
-                                    <label className="form-check-label" for="rememberPasswordCheck">
+                                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
                                         Remember password
                                     </label>
                                     </div>
