@@ -5,14 +5,14 @@ import "./MessageBox.css"
 import { useState, useEffect } from "react"
 
 
-const MessageBox = () => {
+const MessageBox = ({userLogInName}) => {
     const [messages, setMessages] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:9292/messages')
         .then(req => req.json())
         .then((res) => setMessages(res))
-    }, [])
+    }, [messages])
 
 
 
@@ -31,11 +31,12 @@ const MessageBox = () => {
                 <Header />
                 <MessageList 
                     messages={messages} 
-                    
+                    userLogInName={userLogInName}
                     handleDeleteMessage={handleDeleteMessage}
                     />
                 <NewMessage 
                     handleNewMessages={handleNewMessages}
+                    userLogInName={userLogInName}
                     />
             </div>
         </div>

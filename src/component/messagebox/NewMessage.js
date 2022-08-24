@@ -7,7 +7,7 @@ import { useState } from "react"
         </form>
         </div>*/
 
-const NewMessage = ({ handleNewMessages }) => {
+const NewMessage = ({ handleNewMessages, userLogInName }) => {
 
     const[messageData, setMessageData] = useState("")
 
@@ -23,7 +23,7 @@ const NewMessage = ({ handleNewMessages }) => {
             },
             body: JSON.stringify({
                 body: messageData,
-                owner: "Andor",
+                owner:userLogInName,
                 sent_at: time
             })
         })
@@ -39,7 +39,7 @@ const NewMessage = ({ handleNewMessages }) => {
 
         <div className="form-group px-3">
             <form action="" onSubmit={postUrl}>
-            <input type="text" placeholder="message"  onChange={(e) => setMessageData(e.target.value)}/>
+            <input type="text" placeholder="message"  value={messageData} onChange={(e) => setMessageData(e.target.value)}/>
             <button>Send</button>
             </form>
         </div>
