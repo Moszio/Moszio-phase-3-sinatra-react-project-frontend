@@ -9,7 +9,7 @@ import { useState,useEffect } from "react"
 
 const Message = ({message, handleDeleteMessage, setMessages, userLogInName}) => {
 
-const [updateMessage, setUpdateMessage] = useState();
+const [updateMessage, setUpdateMessage] = useState("");
 const [collapse, setCollapse] = useState(true)
 
 
