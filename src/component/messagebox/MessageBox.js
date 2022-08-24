@@ -22,19 +22,20 @@ const MessageBox = ({userLogInName}) => {
     }
 
     const handleDeleteMessage = (id) => {
-    const updatedMessages = messages.filter((message) => message.message.id !== id);
+    const updatedMessages = messages.filter((message) => message.id !== id);
     setMessages(updatedMessages);
     }
 
     return (
         <div className="container d-flex justify-content-center">
-            <div className="card mt-5">
+            <div /*className="card mt-5"*/>
                 <Header />
                 <MessageList 
                     messages={messages} 
                     userLogInName={userLogInName}
                     handleDeleteMessage={handleDeleteMessage}
                     dummy={dummy}
+                    setMessages={setMessages}
                     />
                 <NewMessage 
                     handleNewMessages={handleNewMessages}

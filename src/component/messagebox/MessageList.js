@@ -2,7 +2,7 @@ import Message from "./Message"
 
 
 
-const MessageList = ({messages, handleDeleteMessage, dummy}) => {
+const MessageList = ({messages, handleDeleteMessage, dummy, setMessages, userLogInName}) => {
 
     return (
         <div className="test">
@@ -13,7 +13,8 @@ const MessageList = ({messages, handleDeleteMessage, dummy}) => {
                    message={message} 
                    handleDeleteMessage={handleDeleteMessage} 
                    dummy={dummy}
-                   /*handleUpdateMessage={handleUpdateMessage}*/
+                   setMessages={setMessages}
+                   userLogInName={userLogInName}
                    />
                 })}
                 

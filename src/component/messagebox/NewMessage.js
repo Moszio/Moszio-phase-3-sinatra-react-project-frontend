@@ -23,7 +23,7 @@ const NewMessage = ({ handleNewMessages, userLogInName, dummy }) => {
             },
             body: JSON.stringify({
                 body: messageData,
-                owner:userLogInName,
+                owner: userLogInName,
                 sent_at: time
             })
         })
@@ -35,13 +35,13 @@ const NewMessage = ({ handleNewMessages, userLogInName, dummy }) => {
         )
     }
 
-
+    console.log(userLogInName)
     return (
 
-        <div className="form-group px-3">
+        <div className="btn btn-warning btn-flat">
             <form action="" onSubmit={postUrl}>
-            <input type="text" placeholder="message"  value={messageData} onChange={(e) => setMessageData(e.target.value)}/>
-            <button>Send</button>
+            <input type="text" placeholder="message"  class="input-group-btn" value={messageData} onChange={(e) => setMessageData(e.target.value)}/>
+            <button className="btn btn-warning btn-flat">Send</button>
             </form>
         </div>
     )

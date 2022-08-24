@@ -50,9 +50,10 @@ body{
 }
 
 .test{
-	overflow:scroll;
+	overflow:auto;
 	height: 300px;
 	width: 100%;
+	background-color: #F0F0F0;
 }
 
 .edit-message {

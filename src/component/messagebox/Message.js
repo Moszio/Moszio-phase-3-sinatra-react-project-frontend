@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 
 
 
@@ -7,13 +7,26 @@ import { useState } from "react"
             <li>{message.message.body}</li>
         </div>*/
 
-const Message = ({message, handleDeleteMessage, dummy}) => {
+const Message = ({message, handleDeleteMessage, setMessages, userLogInName}) => {
 
-const [updateMessage, setUpdateMessage] = useState("");
+const [updateMessage, setUpdateMessage] = useState();
 const [collapse, setCollapse] = useState(true)
 
+
+
+
+
+  useEffect(() => {
+        fetch('http://localhost:9292/messages')
+        .then(req => req.json())
+        .then((res) => setMessages(res))
+    }, [updateMessage, collapse])
+
+
+
+
   function handleFormSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); 
 
     fetch(`http://localhost:9292/messages/${message.id}`, {
       method: "PATCH",
@@ -25,32 +38,34 @@ const [collapse, setCollapse] = useState(true)
       }),
     })
       .then(req => req.json())
-      .then((updatedMessage) => setUpdateMessage(updatedMessage)
-      
+      .then((data) => setUpdateMessage(data),
+      handleCollapse(),
       );
+    
   }
 
 
     const handleDeleteClick = () => {
     fetch(`http://localhost:9292/messages/${message.id}`, {
-      method: "DELETE",
+      method: "DELETE"
     });
 
-    handleDeleteMessage(message.id);
+    handleDeleteMessage(message.id)
+    console.log("clicked", collapse)
   }
 
     const handleCollapse = () => {
       setCollapse((collapse) => !collapse)
-      console.log("clicked", collapse)
+      //console.log("clicked", collapse)
     }
-
+    //"bg-white mr-2 p-3"
     //console.log(message.id)
     return (
         <div className="d-flex flex-row p-3">
         
 
-        {collapse ? <div><img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" alt="person"  width="30" height="30"/>
-        <div className="chat ml-2 p-3" onClick={handleCollapse}>{message.body}</div></div> : <div>
+        {collapse ? <div><p>{message.owner}</p>
+        <div className={message.owner === userLogInName ? "chat ml-2 p-3" : "bg-white mr-2 p-3"} onClick={handleCollapse}>{message.body}</div></div> : <div>
         <button onClick={handleDeleteClick} className="delete-btn">Delete</button>
         <form className="edit-message" onSubmit={handleFormSubmit}>
             <input
