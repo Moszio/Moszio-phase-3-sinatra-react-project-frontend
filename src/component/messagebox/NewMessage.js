@@ -7,7 +7,7 @@ import { useState } from "react"
         </form>
         </div>*/
 
-const NewMessage = ({ handleNewMessages, userLogInName }) => {
+const NewMessage = ({ handleNewMessages, userLogInName, dummy }) => {
 
     const[messageData, setMessageData] = useState("")
 
@@ -30,7 +30,8 @@ const NewMessage = ({ handleNewMessages, userLogInName }) => {
         .then(req =>req.json())
         .then(data => 
             handleNewMessages(data),
-            setMessageData("")
+            setMessageData(""),
+            dummy.current.scrollIntoView({ behavior: 'smooth' })
         )
     }
 

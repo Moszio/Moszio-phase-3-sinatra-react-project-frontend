@@ -7,7 +7,7 @@ import { useState } from "react"
             <li>{message.message.body}</li>
         </div>*/
 
-const Message = ({message, handleDeleteMessage}) => {
+const Message = ({message, handleDeleteMessage, dummy}) => {
 
 const [updateMessage, setUpdateMessage] = useState("");
 const [collapse, setCollapse] = useState(true)
@@ -25,9 +25,8 @@ const [collapse, setCollapse] = useState(true)
       }),
     })
       .then(req => req.json())
-      .then((updatedMessage) => 
-      setUpdateMessage(updatedMessage),
-      setCollapse((collapse) => !collapse)
+      .then((updatedMessage) => setUpdateMessage(updatedMessage)
+      
       );
   }
 
@@ -38,7 +37,6 @@ const [collapse, setCollapse] = useState(true)
     });
 
     handleDeleteMessage(message.id);
-    setCollapse((collapse) => !collapse)
   }
 
     const handleCollapse = () => {
@@ -51,9 +49,9 @@ const [collapse, setCollapse] = useState(true)
         <div className="d-flex flex-row p-3">
         
 
-        {collapse ? <div><img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" alt="person"  width="30" height="30"/><p>{message.owner}</p>
+        {collapse ? <div><img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" alt="person"  width="30" height="30"/>
         <div className="chat ml-2 p-3" onClick={handleCollapse}>{message.body}</div></div> : <div>
-        <button onClick={handleDeleteClick}>Delete</button>
+        <button onClick={handleDeleteClick} className="delete-btn">Delete</button>
         <form className="edit-message" onSubmit={handleFormSubmit}>
             <input
             type="text"
@@ -65,7 +63,6 @@ const [collapse, setCollapse] = useState(true)
             <input type="submit" value="Update" />
         </form>
         </div>}
-
       </div>
     )
 }

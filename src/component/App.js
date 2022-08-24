@@ -20,7 +20,7 @@ const App = () => {
   const[users, setUsers]=useState([])
   const[userLogInName, setUserLogInName]=useState('')
 
-  //console.log("username", userLogInName)
+
   return (
     <>
       <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
@@ -37,7 +37,7 @@ const App = () => {
           <SignUp setUsers={setUsers} users={users}/>
         </Route>
         <Route exact path="/">
-          <Home userLogInName={userLogInName}/>
+          <Home />
         </Route>
       </Switch>
       <Footer logIn={logIn} userLogInName={userLogInName} />

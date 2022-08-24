@@ -2,17 +2,18 @@ import MessageList from "./MessageList"
 import Header from "./Header"
 import NewMessage from "./NewMessage"
 import "./MessageBox.css"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 
 const MessageBox = ({userLogInName}) => {
     const [messages, setMessages] = useState([])
+    const dummy = useRef()
 
     useEffect(() => {
         fetch('http://localhost:9292/messages')
         .then(req => req.json())
         .then((res) => setMessages(res))
-    }, [messages])
+    }, [])
 
 
 
@@ -33,11 +34,14 @@ const MessageBox = ({userLogInName}) => {
                     messages={messages} 
                     userLogInName={userLogInName}
                     handleDeleteMessage={handleDeleteMessage}
+                    dummy={dummy}
                     />
                 <NewMessage 
                     handleNewMessages={handleNewMessages}
                     userLogInName={userLogInName}
+                    dummy={dummy}
                     />
+                
             </div>
         </div>
     )

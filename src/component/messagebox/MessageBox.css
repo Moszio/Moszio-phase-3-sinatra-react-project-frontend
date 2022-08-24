@@ -48,3 +48,17 @@ body{
 	font-size: 8px;
 	color: #C4C4C4;
 }
+
+.test{
+	overflow:scroll;
+	height: 300px;
+	width: 100%;
+}
+
+.edit-message {
+
+}
+
+.delete-btn{
+	border-radius: 5px;
+}
