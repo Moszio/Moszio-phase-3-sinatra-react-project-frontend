@@ -6,9 +6,12 @@ import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Footer from './Footer'
+import Ship from './Ship'
+import Track from './Track'
 import "./App.css"
 import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
+
 
 
 const App = () => {
@@ -35,6 +38,12 @@ const App = () => {
         </Route>
         <Route exact path="/signUp">
           <SignUp setUsers={setUsers} users={users}/>
+        </Route>
+        <Route exact path="/ship">
+          <Ship />
+        </Route>
+        <Route exact path="/track">
+          <Track />
         </Route>
         <Route exact path="/">
           <Home />

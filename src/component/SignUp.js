@@ -92,7 +92,7 @@ const SignUp = ({setUsers, users}) => {
             body: JSON.stringify(newUser)
             }).then(req=> req.json())
             .then (res => setUsers(...users, res))
-            
+
             setNewName('')
             setNewLastName('')
             setNewEmail('')
