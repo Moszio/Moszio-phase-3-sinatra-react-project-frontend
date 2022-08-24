@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import { useHistory } from "react-router-dom";
 
 
 const SignUp = ({setUsers, users}) => {
+
+    const history = useHistory()
+
     const[newName, setNewName]=useState('')
     const handleNewName = (e) =>{
         setNewName(e.target.value)
@@ -96,23 +99,13 @@ const SignUp = ({setUsers, users}) => {
             setNewUserName('')
             setPassword1('')
             setPassword2('')
-
+            history.push("/login")
             // send info user can log in
             // USER CAN LOGG IN ANDOR return to log in page
         }
 
     }
-        
 
-    
-
-
-
-    // t.string "name"
-    // t.string "lastName"
-    // t.string "contact"
-    // t.string "login"
-    // t.string "password"
 
     return (
         <>
@@ -124,7 +117,8 @@ const SignUp = ({setUsers, users}) => {
                 <div className="container">
                 <div className="row">
                     <div className="col-md-9 col-lg-8 mx-auto">
-                    <h3 className="login-heading mb-4">Welcome back!</h3>
+                    {/* <img src='../../Logo.jpg'/> */}
+                    <h3 className="login-heading mb-4">Create Account</h3>
                     <form onSubmit={handleNewUser}>
                         <div className="form-floating mb-3">
                         <input type="text" className="form-control" id="floatingInput" placeholder="User Name" value={newName} onChange={handleNewName}/>
