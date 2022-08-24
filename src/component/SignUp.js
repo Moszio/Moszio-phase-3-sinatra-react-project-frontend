@@ -109,7 +109,7 @@ const SignUp = ({setUsers, users}) => {
 
     return (
         <>
-        <div className="container-fluid ps-md-0">
+        <div className="container-fluid ps-md-0" style={{margin:"5%"}}>
         <div className="row g-0">
             <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div className="col-md-8 col-lg-6">

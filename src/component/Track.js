@@ -2,7 +2,7 @@ import React from "react";
 
 const Track = () => {
   return (
-    <h1>Track a package</h1>
+    <h1 style={{margin:"5%"}}>Track a package</h1>
   )
 }
 

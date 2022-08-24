@@ -3,7 +3,7 @@ import MessageBox from "./messagebox/MessageBox";
 
 const Home = () => {
   return (
-    <div className="home-main">
+    <div className="home-main" style={{margin:"5%"}}>
         <div className="home-page-section-1">
             <div className="home-page-section-1-container">
                 <div className="home-page-section-1-hmp-message">
