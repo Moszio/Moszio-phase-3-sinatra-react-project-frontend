@@ -38,10 +38,12 @@ const NewMessage = ({ handleNewMessages, userLogInName, dummy }) => {
     console.log(userLogInName)
     return (
 
-        <div>
-            <form action="" onSubmit={postUrl} className="new-message">
+        <div class="box-footer">
+            <form action="" onSubmit={postUrl} >
+                <div class="input-group">
             <input type="text" placeholder="message"  value={messageData} onChange={(e) => setMessageData(e.target.value)}/>
             <button >Send</button>
+            </div>
             </form>
         </div>
     )
