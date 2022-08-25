@@ -8,7 +8,7 @@ import Review from './Shipping/Review'
 
 function Ship() {
     const[step, setStep]=useState(0)
-    const steps = ["Ship from", "Ship to", "Package details", "Review information."]
+    const steps = ["Where are you shipping from?", "Where are you shipping to?", "Package details", "Review information"]
     const handlePrevious =()=>{
         if (step > 0){
             setStep(step-1)  
@@ -22,16 +22,48 @@ function Ship() {
     }
     const returnStep =() =>{
         if (step === 0){
-            return <AddressFrom />
+            return <AddressFrom setAddressFrom={setAddressFrom} addressFrom={addressFrom}/>
         } else if (step=== 1){
-            return <AddressTo />
-        } else if (step === 3){
-            return <PackageInfo />
+            return <AddressTo setAddressTo={setAddressTo} addressTo={addressTo}/>
+        } else if (step === 2){
+            return <PackageInfo setBox={setBox} box={box} />
         } else {
-            return <Review />
+            return <Review box={box} addressFrom={addressFrom} addressTo={addressTo} />
         }
-
     }
+
+    const initialValuesFrom = {
+        firstNameFrom:"",
+        lastNameFrom:"",
+        phoneNumberFrom: "",
+        emailFrom:"",
+        streetFrom: "",
+        cityFrom: '',
+        StateFrom: "",
+        zipFrom: 0
+    }
+    const initialValuesTo = {
+        firstNameTo:"",
+        lastNameTo:"",
+        phoneNumberTo: "",
+        emailTo:"",
+        streetTo: "",
+        cityTo: '',
+        StateTo: "",
+        zipTo: 0
+    }
+    const initialValuesPackageDetails = {
+        shippingMethod:"",
+        dimensionL:"",
+        dimensionW: "",
+        dimensionH:"",
+        weight: "",
+        deliveryConfirmation: '',
+        packageDeliveryConfirmation: "",
+    }
+    const[addressFrom, setAddressFrom]=useState(initialValuesFrom)
+    const[addressTo, setAddressTo]=useState(initialValuesTo)
+    const[box, setBox]=useState(initialValuesPackageDetails)
 
   return (
     <div className="form" style={{margin:"5%"}}>
