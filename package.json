@@ -19,10 +19,7 @@
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
     "react-us-states": "^1.0.2",
-<<<<<<< HEAD
-=======
     "states-us": "^1.0.2",
->>>>>>> 73928b1 (packages)
     "web-vitals": "^2.1.4"
   },
   "scripts": {
