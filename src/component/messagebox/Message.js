@@ -76,6 +76,7 @@ const [collapse, setCollapse] = useState(true)
             type="text"
             name="body"
             autoComplete="off"
+            placeholder="update"
             value={updateMessage}
             onChange={(e) => setUpdateMessage(e.target.value)}
             className="input-field"
