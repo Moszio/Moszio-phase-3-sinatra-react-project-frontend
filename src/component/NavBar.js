@@ -26,15 +26,10 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) 
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <div className="collapse navbar-collapse nav justify-content-end" id="navbarCollapse">
                         <div className="navbar-nav">
                             {logIn ?  
                                 <>
-                                    <div></div>
-                                    <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
-                                    <Link to="/about" className="nav-item nav-link" id="About">About</Link>
-                                    <Link to="/" className="nav-item nav-link" onClick={logOut}>Log out</Link>
-
                                     <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         Shipping
@@ -44,6 +39,11 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) 
                                         <li><Link class="dropdown-item" to="/track">Tracking</Link></li>
                                     </ul>
                                     </div>
+                                    
+                                    <Link to="/about" className="nav-item nav-link" id="About">Contact</Link>
+                                    <Link to="/" className="nav-item nav-link" onClick={logOut}>Log out</Link>
+
+
                                 </> 
                                 : 
                                 <>
