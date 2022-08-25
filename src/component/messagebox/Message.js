@@ -61,7 +61,7 @@ const [collapse, setCollapse] = useState(true)
     //"bg-white mr-2 p-3"
     //console.log(message.id)
     return (
-        <div>
+        <div className="message-edit-container">
         
 
         {collapse ? <div className="d-flex flex-row p-3">

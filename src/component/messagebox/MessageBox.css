@@ -135,3 +135,6 @@ form.edit-message input[type="button"]:hover {
 	transform: scale(1.01);
 	background-color: #0d427a;
 }
+
+
+.message-edit-container{}
