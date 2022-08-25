@@ -50,7 +50,7 @@ function AddressTo({setAddressTo, addressTo}) {
               <select  id="" class="form-select" name="StateTo"   value={addressTo.StateTo} onChange={(e) => setAddressTo({...addressTo, [e.target.name]:e.target.value})}>
                 <option value=""></option>
                 {states.map(state => (
-                  <option value="">{state.name}</option>
+                  <option value={state.name}>{state.name}</option>
                 ))}
               </select>
               <label class="form-label">State</label>

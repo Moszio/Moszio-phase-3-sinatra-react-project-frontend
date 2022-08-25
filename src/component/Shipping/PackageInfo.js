@@ -54,18 +54,18 @@ function PackageInfo({setBox, box}) {
             <div class="row"></div>
             <div class="col-lg-5">
               <select name="" id="" class="form-select" name="deliveryConfirmation" value={box.deliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
-                <option value="">Email</option>
-                <option value="">SMS</option>
+                <option value="Email">Email</option>
+                <option value="SMS">SMS</option>
               </select>
               <label class="form-label">Delivery confirmation</label>
             </div>            
           
             <div class="col-md-8">
               <select name="" id="" class="form-select" name="packageDeliveryConfirmation" value={box.packageDeliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
-                <option value="">No</option>
-                <option value="">Yes</option>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
               </select>
-              <label class="form-label">Package Delivery Confirmation</label>            
+              <label class="form-label">Proof of delivery (Recipient's signature)</label>            
             </div>
         </form>
         </div>

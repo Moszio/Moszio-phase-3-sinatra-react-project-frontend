@@ -15,6 +15,10 @@ https://unsplash.com/photos/mVqTumQH-c0?utm_source=unsplash&utm_medium=referral&
 US States
 npm i react-us-states
 
+###
+print 
+npm install -s react-to-print
+
 
 
 
