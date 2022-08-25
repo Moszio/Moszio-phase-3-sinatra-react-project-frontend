@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat}) => {
+const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChatOpen, isChatOpen}) => {
     const history = useHistory()
 
     const clickToGoToHomepage = () => {
@@ -16,7 +16,7 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat}) => {
             setUserEmail("")
             setPassword("")
             setLogIn(!logIn)
-            openChat()
+            setIsChatOpen(false)
     }
     return (
         <div class="m-4">

@@ -6,7 +6,7 @@ const Footer = ({logIn, userLogInName,openChat,isChatOpen}) => {
   
     return (
         <div class="text-center p-4" style={{position:"fixed",width:"100%", bottom: "0"}}>
-            {isChatOpen ? null : <MessageBox userLogInName={userLogInName} openChat={openChat}/>}
+            {isChatOpen ? (<MessageBox userLogInName={userLogInName} openChat={openChat}/>) : <></> }
             {logIn ? ( 
                 <BsFillChatDotsFill onClick={openChat} style={{float:"right"}}  />
             ):(<></>)}

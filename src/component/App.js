@@ -25,7 +25,11 @@ const App = () => {
   const[newUser, setNewUser]=useState(false)
   const[users, setUsers]=useState([])
   const[userLogInName, setUserLogInName]=useState('')
-  const[isChatOpen, setIsChatOpen]=useState(logIn === true ? false : true)
+  const[isChatOpen, setIsChatOpen]=useState(false)
+  const[userConfirm, setUserConfirm]=useState({
+    name:"", 
+    lastName:""
+  })
 
     const openChat = () =>{
         setIsChatOpen(!isChatOpen)
@@ -36,14 +40,14 @@ const App = () => {
   return (
     <>
       <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} openChat={openChat}/>
+          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} openChat={openChat} setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen}/>
       <Switch>
         <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/login">
           <Login setUserLogInName={setUserLogInName} users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
+          password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser} userConfirm={userConfirm} setUserConfirm={setUserConfirm}/>
         </Route>
         <Route exact path="/signUp">
           <SignUp setUsers={setUsers} users={users}/>
@@ -57,6 +61,7 @@ const App = () => {
         <Route exact path="/contact">
           <Contact />
         </Route>
+
         <Route exact path="/">
           <Home />
         </Route>
