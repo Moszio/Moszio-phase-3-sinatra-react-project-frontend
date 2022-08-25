@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom'
+
 
 
 const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) => {
@@ -20,23 +22,35 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) 
         <div class="m-4">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a href="/" className="navbar-brand" >FFS Transportation</a>
+                    <Link to="/" className="navbar-brand" >FFS Transportation</Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <div className="navbar-nav">
-                            <a href="/" className="nav-item nav-link active">Home</a>
-                            <a href="/about" className="nav-item nav-link">About</a>
                             {logIn ?  
                                 <>
-                                    <a href="#" className="nav-item nav-link" >Ship a package</a>
-                                    <a href="/" className="nav-item nav-link" onClick={logOut}>Log out</a>
+                                    <div></div>
+                                    <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
+                                    <Link to="/about" className="nav-item nav-link" id="About">About</Link>
+                                    <Link to="/" className="nav-item nav-link" onClick={logOut}>Log out</Link>
+
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Shipping
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><Link class="dropdown-item" to="/ship">Shipping</Link></li>
+                                        <li><Link class="dropdown-item" to="/track">Tracking</Link></li>
+                                    </ul>
+                                    </div>
                                 </> 
                                 : 
                                 <>
-                                <a href="/signup" className="nav-item nav-link">Sign up</a>
-                                <a href="/login" className="nav-item nav-link">Log in</a>
+                                <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
+                                <Link to="/about" className="nav-item nav-link" id="About">About</Link>
+                                <Link to="/signup" className="nav-item nav-link">Sign up</Link>
+                                <Link to="/login" className="nav-item nav-link">Log in</Link>
                                 </>}  
                         </div>
                     </div>
