@@ -47,8 +47,13 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, setUserLogInName}) 
                                 </> 
                                 : 
                                 <>
+
                                 <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
-                                <Link to="/about" className="nav-item nav-link" id="About">About</Link>
+                                
+
+                                <Link to="/about" className="nav-item nav-link active" id="Home">About</Link>
+                                <Link to="/contact" className="nav-item nav-link" id="About">Contact</Link>
+
                                 <Link to="/signup" className="nav-item nav-link">Sign up</Link>
                                 <Link to="/login" className="nav-item nav-link">Log in</Link>
                                 </>}  

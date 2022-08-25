@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 import Footer from './Footer'
 import Ship from './Ship'
 import Track from './Track'
+import Contact from './Contact'
 import "./App.css"
 import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
@@ -47,6 +48,9 @@ const App = () => {
         </Route>
         <Route exact path="/track">
           <Track />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
         <Route exact path="/">
           <Home />
