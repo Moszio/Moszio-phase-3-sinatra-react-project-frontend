@@ -25,13 +25,18 @@ const App = () => {
   const[newUser, setNewUser]=useState(false)
   const[users, setUsers]=useState([])
   const[userLogInName, setUserLogInName]=useState('')
+  const[isChatOpen, setIsChatOpen]=useState(logIn === true ? false : true)
 
+    const openChat = () =>{
+        setIsChatOpen(!isChatOpen)
+        console.log(userLogInName)
+    }
 
 
   return (
     <>
       <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} />
+          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} openChat={openChat}/>
       <Switch>
         <Route exact path="/about">
           <About />
@@ -56,7 +61,7 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-      <Footer logIn={logIn} userLogInName={userLogInName} />
+      <Footer logIn={logIn} userLogInName={userLogInName} openChat={openChat} isChatOpen={isChatOpen}/>
 
     </>
   );

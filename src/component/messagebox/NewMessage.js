@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { BiSend } from 'react-icons/bi';
 
 /* <div className="new-message">
         <form action="" onSubmit={postUrl}>
@@ -42,7 +43,9 @@ const NewMessage = ({ handleNewMessages, userLogInName, dummy }) => {
             <form action="" onSubmit={postUrl} >
                 <div class="input-group">
             <input type="text" placeholder="message"  value={messageData} onChange={(e) => setMessageData(e.target.value)}/>
-            <button >Send</button>
+            <button className="send-btn">
+                <BiSend/> Send
+            </button>
             </div>
             </form>
         </div>

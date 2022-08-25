@@ -12,7 +12,7 @@ const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, s
         .then(req=> req.json())
         .then(res => setUsers(res))
     },[])
-    console.log(users)
+    //console.log(users)
 
     const handleUser = (e) =>{
         setUserEmail(e.target.value)

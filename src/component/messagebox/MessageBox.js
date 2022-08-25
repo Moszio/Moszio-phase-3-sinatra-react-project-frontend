@@ -5,7 +5,7 @@ import "./MessageBox.css"
 import { useState, useEffect, useRef } from "react"
 
 
-const MessageBox = ({userLogInName}) => {
+const MessageBox = ({userLogInName, openChat}) => {
     const [messages, setMessages] = useState([])
     const dummy = useRef()
 
@@ -27,9 +27,11 @@ const MessageBox = ({userLogInName}) => {
     }
 
     return (
-        <div className="container d-flex justify-content-center">
-            <div /*className="card mt-5"*/>
-                <Header />
+
+        <div className="container-msg">
+            <div className="">
+
+                <Header openChat={openChat}/>
                 <MessageList 
                     messages={messages} 
                     userLogInName={userLogInName}
