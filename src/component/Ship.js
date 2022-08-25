@@ -72,9 +72,7 @@ function Ship() {
     const[addressFrom, setAddressFrom]=useState(initialValuesFrom)
     const[addressTo, setAddressTo]=useState(initialValuesTo)
     const[box, setBox]=useState(initialValuesPackageDetails)
-    const shipPackageConfirmed = () =>{
-            console.log("shipped")
-    }
+
 
 
   return (
