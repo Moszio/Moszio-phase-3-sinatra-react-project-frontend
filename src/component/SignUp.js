@@ -67,7 +67,7 @@ const SignUp = ({setUsers, users}) => {
         }
     }
 
-
+     const[signedUp, setSignedUp]=useState(false)
     const handleNewUser = (e) =>{
         e.preventDefault()
         // FINISHED HERE handle submiting form
@@ -99,21 +99,27 @@ const SignUp = ({setUsers, users}) => {
             setNewUserName('')
             setPassword1('')
             setPassword2('')
-            history.push("/login")
+            setSignedUp(!signedUp)
             // send info user can log in
             // USER CAN LOGG IN ANDOR return to log in page
         }
 
     }
+   
 
 
     return (
         <>
-        <div className="container-fluid ps-md-0" style={{margin:"5%"}}>
+        <div className="container-fluid ps-md-0">
         <div className="row g-0">
             <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div className="col-md-8 col-lg-6">
             <div className="login d-flex align-items-center py-5">
+            {signedUp ? (
+                <div>Congratulation! Now you can log in! </div>
+                // button
+
+            ):(<>
                 <div className="container">
                 <div className="row">
                     <div className="col-md-9 col-lg-8 mx-auto">
@@ -160,11 +166,12 @@ const SignUp = ({setUsers, users}) => {
                         <div className="d-grid">
                         <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign up</button>
                         </div>
-                        
                     </form>
                     </div>
                 </div>
                 </div>
+                </>
+            )}
             </div>
             </div>
         </div>
