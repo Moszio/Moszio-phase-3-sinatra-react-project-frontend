@@ -20,7 +20,7 @@ const [collapse, setCollapse] = useState(true)
         fetch('http://localhost:9292/messages')
         .then(req => req.json())
         .then((res) => setMessages(res))
-    }, [updateMessage, collapse])
+    }, [updateMessage])
 
 
 
@@ -51,7 +51,7 @@ const [collapse, setCollapse] = useState(true)
     });
 
     handleDeleteMessage(message.id)
-    console.log("clicked", collapse)
+    //console.log("clicked", collapse)
   }
 
     const handleCollapse = () => {
@@ -81,7 +81,11 @@ const [collapse, setCollapse] = useState(true)
             onChange={(e) => setUpdateMessage(e.target.value)}
             className="input-field"
             />
-            <input type="submit" value="Update" /><input type="button" value="Delete" onClick={handleDeleteClick} class="input-group-text send_btn"/>
+            <div className="input-div">
+              <span><i class="fa fa-times"></i><input className="input-div" type="submit" value=""/>
+              </span>
+              <span> <input className="input-div" type="button" value="" onClick={handleDeleteClick}/></span>
+            </div>
         </form>
         </div>}
       </div>

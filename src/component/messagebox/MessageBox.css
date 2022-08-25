@@ -59,23 +59,50 @@ body{
 
 .edit-message {
 	width: 100px;
+	height: 40px;
 	display: flex;
   	flex-direction: row;
 	margin-bottom: 10px;
+	gap: 5%;
+}
+
+.input-div{
+	display: flex;
+	gap: 10%;
 }
 
 form.edit-message input[type="text"] {
   margin-top: 0.5rem;
   border: 1px solid transparent;
   background-color: white;
-  width: 100px;
+  width: 150px;
+  margin-left: 5px;
 }
 
 
 
 form.edit-message input[type="submit"] {
   margin-top: 0.5rem;
-  width: 100px;
+  width: 30px;
+  border-color: green;
+  border-radius: 5px;
+  background-color: rgb(179, 251, 192);
+}
+form.edit-message input[type="submit"]:hover {
+   transform: scale(1.01);
+   border: 2px solid rgb(179, 251, 192);
+}
+
+form.edit-message input[type="button"] {
+  margin-top: 0.5rem;
+  width: 30px;
+  border-color: red;
+  border-radius: 5px;
+  background-color: rgb(255, 185, 185);
+}
+form.edit-message input[type="button"]:hover {
+   transform: scale(1.01);
+   border: 2px solid rgb(255, 185, 185);
 }
 
 
@@ -89,7 +116,3 @@ form.edit-message input[type="submit"] {
     background-color: #083564;
 }
 
-
-.box-footer button{
-	background-color: rgb(205, 202, 202);
-}
