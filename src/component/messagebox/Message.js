@@ -69,9 +69,8 @@ const [collapse, setCollapse] = useState(true)
         <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30"/> 
         :
         <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30"/>} 
-        <div className={message.owner === userLogInName ? "chat ml-2 p-3" : "bg-white mr-2 p-3"} onClick={handleCollapse}>{message.body}</div></div> : <div>
-          <p>{message.owner}</p>
-        <button onClick={handleDeleteClick} className="delete-btn">Delete</button>
+        <div className={message.owner === userLogInName ? "chat ml-2 p-3" : "bg-white mr-2 p-3"} onClick={handleCollapse}>{message.body}</div></div> : <div class="input-group">
+        {/*<button onClick={handleDeleteClick} className="delete-btn">Delete</button>*/}
         <form className="edit-message" onSubmit={handleFormSubmit} >
             <input
             type="text"
@@ -81,7 +80,7 @@ const [collapse, setCollapse] = useState(true)
             onChange={(e) => setUpdateMessage(e.target.value)}
             className="input-field"
             />
-            <input type="submit" value="Update" />
+            <input type="submit" value="Update" /><input type="button" value="Delete" onClick={handleDeleteClick} class="input-group-text send_btn"/>
         </form>
         </div>}
       </div>

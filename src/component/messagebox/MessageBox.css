@@ -53,28 +53,25 @@ body{
 	overflow:auto;
 	height: 300px;
 	width: 100%;
-	background-color: #F0F0F0;
+	background-color: #f7f9f2;
+	/*background-image: linear-gradient(to bottom, #0d4b8d, #71b2f8, #95c8ff, #badafc, #ebf3fb);*/
 }
 
 .edit-message {
 	width: 100px;
 	display: flex;
-  flex-direction: column;
+  	flex-direction: row;
+	margin-bottom: 10px;
 }
 
 form.edit-message input[type="text"] {
   margin-top: 0.5rem;
   border: 1px solid transparent;
   background-color: white;
+  width: 100px;
 }
 
-.delete-btn{
-	border-radius: 5px;
-}
 
-form.edit-message input[type="text"]:focus {
-  border: 1px solid yellow;
-}
 
 form.edit-message input[type="submit"] {
   margin-top: 0.5rem;
@@ -85,10 +82,14 @@ form.edit-message input[type="submit"] {
  .box-footer{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border-top: 1px solid #f4f4f4;
     padding: 10px;
-    background-color: #fff;
+    background-color: #083564;
 }
 
+
+.box-footer button{
+	background-color: rgb(205, 202, 202);
+}
