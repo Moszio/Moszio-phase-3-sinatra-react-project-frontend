@@ -21,4 +21,7 @@ const Footer = ({logIn, userLogInName}) => {
     )
 }
 
+
+
+
 export default Footer;

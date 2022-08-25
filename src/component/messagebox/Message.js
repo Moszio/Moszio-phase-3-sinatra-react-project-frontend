@@ -61,19 +61,25 @@ const [collapse, setCollapse] = useState(true)
     //"bg-white mr-2 p-3"
     //console.log(message.id)
     return (
-        <div className="d-flex flex-row p-3">
+        <div>
         
 
-        {collapse ? <div><p>{message.owner}</p>
+        {collapse ? <div className="d-flex flex-row p-3">
+        {message.owner === userLogInName ? 
+        <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30"/> 
+        :
+        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30"/>} 
         <div className={message.owner === userLogInName ? "chat ml-2 p-3" : "bg-white mr-2 p-3"} onClick={handleCollapse}>{message.body}</div></div> : <div>
+          <p>{message.owner}</p>
         <button onClick={handleDeleteClick} className="delete-btn">Delete</button>
-        <form className="edit-message" onSubmit={handleFormSubmit}>
+        <form className="edit-message" onSubmit={handleFormSubmit} >
             <input
             type="text"
             name="body"
             autoComplete="off"
             value={updateMessage}
             onChange={(e) => setUpdateMessage(e.target.value)}
+            className="input-field"
             />
             <input type="submit" value="Update" />
         </form>
