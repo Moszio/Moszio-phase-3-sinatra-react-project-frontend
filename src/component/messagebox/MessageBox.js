@@ -27,8 +27,10 @@ const MessageBox = ({userLogInName, openChat}) => {
     }
 
     return (
-        <div className="container d-flex justify-content-center">
-            <div /*className="card mt-5"*/>
+
+        <div className="container-msg">
+            <div className="">
+
                 <Header openChat={openChat}/>
                 <MessageList 
                     messages={messages} 

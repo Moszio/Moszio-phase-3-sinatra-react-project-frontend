@@ -16,9 +16,14 @@ US States
 npm i react-us-states
 
 ###
+<<<<<<< HEAD
 print 
 npm install -s react-to-print
 
+=======
+for icons install:
+### npm install react-icons --save
+>>>>>>> Andor-cs-changes
 
 
 
