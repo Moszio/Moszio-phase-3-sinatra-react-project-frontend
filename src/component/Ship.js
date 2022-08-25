@@ -8,6 +8,8 @@ import Review from './Shipping/Review'
 
 
 
+
+
 function Ship() {
     const[step, setStep]=useState(0)
     const steps = ["Where are you shipping from?", "Where are you shipping to?", "Package details", "Review information"]
@@ -18,7 +20,7 @@ function Ship() {
     }
 
     const handleNext =()=>{
-        if (step <= steps.length -1 ){
+        if (step <= steps.length  ){
             setStep(step+1)
         }
     }
@@ -72,31 +74,47 @@ function Ship() {
     const[addressFrom, setAddressFrom]=useState(initialValuesFrom)
     const[addressTo, setAddressTo]=useState(initialValuesTo)
     const[box, setBox]=useState(initialValuesPackageDetails)
+    const[shipped, setShipped]=useState(false)
+    const sendPackage = ()=>{
+        setShipped(true)
+    }
 
-
-
-  return (
+    return (
     <div className="form" style={{margin:"5%"}}>
         <div className="progressBar"></div>
         <div className="form-container">
             <div className="header">
+
+            { shipped ? 
+            (   <>
+                <div className="">
+                    <h4> You just shipped your package!</h4>
+                    <button className="btn btn-primary form-control" onClick={handlePrint} style={{width:"12%", margin:'3%', backgroundColor:"green"}}>Print confirmation</button>
+                </div>
+                </>
+            ):( <>             
                 <h1 style={{textAlign:'Center', marginBottom:"3%"}}>{steps[step]}</h1>
+                </>)}
                 {returnStep()}
             </div>
 
                 {(step === (steps.length - 1)) ?(
-                    <>
+                    <> 
                         <div className="form"></div>
                         <div className="footer" style={{display:"inline"}}>
-                            <button class="btn btn-primary form-control"onClick={handlePrevious} disabled={step <= 0 } style={{width:"10%", margin:'3%', }}>Return to form</button>
-                            <button class="btn btn-primary form-control" onClick={handlePrint} style={{width:"10%", margin:'3%', backgroundColor:"green", float:"right"}}>Confirm</button>
+                            {shipped ? 
+                            (null):(
+                                <><button className="btn btn-primary form-control" onClick={handlePrevious} disabled={step <= 0} style={{width:"12%", margin:'3%', }}>Return to form</button>
+                                <button className="btn btn-primary form-control" onClick={sendPackage}  style={{width:"12%", margin:'3%', float:"right"}}>Send package</button> 
+                                </>
+                            )}                      
                         </div>
                     </>
                 ):( <>
                         <div className="form"></div>
                         <div className="footer" style={{display:"flex", justifyContent:"center"}}>
-                            <button class="btn btn-primary form-control"onClick={handlePrevious} disabled={step <= 0 } style={{width:"10%", margin:'3%'}}>Back</button>
-                            <button class="btn btn-primary form-control"onClick= {handleNext} disabled={step >= steps.length-1} style={{width:"10%" , margin:'3%'}}>Next</button>
+                            <button className="btn btn-primary form-control"onClick={handlePrevious} disabled={step <= 0 } style={{width:"10%", margin:'3%'}}>Back</button>
+                            <button className="btn btn-primary form-control"onClick= {handleNext} disabled={step >= steps.length-1} style={{width:"10%" , margin:'3%'}}>Next</button>
                         </div>
         
                     </>

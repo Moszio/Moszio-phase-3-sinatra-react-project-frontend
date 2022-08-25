@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SignUp from "./SignUp"
 import { useHistory } from 'react-router-dom';
 
-const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
+const Login = ({userConfirm, setUserConfirm, setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, setUserEmail, password, setPassword, newUser, setNewUser}) => {
     const history = useHistory()
 
 
@@ -35,6 +35,11 @@ const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, s
             } else {
                 setLogIn(!logIn)
                 setUserLogInName(inputUser.name)
+                setUserConfirm({
+                    name:inputUser.name,
+                    lastName:inputUser.lastName
+                })
+                
                 history.push("/")
             }
         } else {
@@ -80,7 +85,7 @@ const Login = ({setUserLogInName, users, setUsers, setLogIn, logIn, userEmail, s
                                     </div>
 
                                     <div className="d-grid">
-                                    <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                                    <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Log in</button>
                                     <div className="text-center">
                                         <a className="small" href="#">Forgot password?</a>
                                     </div>

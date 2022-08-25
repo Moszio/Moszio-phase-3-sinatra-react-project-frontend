@@ -103,7 +103,10 @@ const SignUp = ({setUsers, users}) => {
             // send info user can log in
             // USER CAN LOGG IN ANDOR return to log in page
         }
+    }
 
+    const handleLogIn = () =>{
+        history.push("/login")
     }
    
 
@@ -116,9 +119,22 @@ const SignUp = ({setUsers, users}) => {
             <div className="col-md-8 col-lg-6">
             <div className="login d-flex align-items-center py-5">
             {signedUp ? (
-                <div>Congratulation! Now you can log in! </div>
-                // button
+                <>
+                <div className="container">
+                <div className="row">
+                    <div className="col-md-9 col-lg-8 mx-auto" style={{justifyContent:"center", textAlign:"center"}}>
+                    <img style={{width:'40%'}} src='../../Logo.jpg'/>
 
+                    <h3 className="login-heading mb-4">Congratulation<span>{<br/>}</span>Now you can log in!</h3>
+                    <form onSubmit={handleLogIn}>
+                        <div className="d-grid">
+                        <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Log in</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                </div>
+                </>
             ):(<>
                 <div className="container">
                 <div className="row">
