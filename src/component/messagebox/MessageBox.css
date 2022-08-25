@@ -116,3 +116,22 @@ form.edit-message input[type="button"]:hover {
     background-color: #083564;
 }
 
+
+.container-msg{
+	width: auto;
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+	transition:ease-in;
+}
+
+.send-btn{
+	color: white;
+	background-color: #083564;
+	border: none;
+	border-radius: 5px;
+}
+.send-btn:hover{
+	transform: scale(1.01);
+	background-color: #0d427a;
+}

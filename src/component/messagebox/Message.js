@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
-
-
+import { BiSend } from 'react-icons/bi';
+import { MdDeleteOutline } from 'react-icons/md';
 
 /* <div>
             <li>{message.message.owner} {message.message.sent_at}</li>
@@ -41,7 +41,7 @@ const [collapse, setCollapse] = useState(true)
       .then((data) => setUpdateMessage(data),
       handleCollapse(),
       );
-    
+    setUpdateMessage("")
   }
 
 
@@ -82,7 +82,7 @@ const [collapse, setCollapse] = useState(true)
             className="input-field"
             />
             <div className="input-div">
-              <span><i class="fa fa-times"></i><input className="input-div" type="submit" value=""/>
+              <span><input className="input-div" type="submit" value=""/>
               </span>
               <span> <input className="input-div" type="button" value="" onClick={handleDeleteClick}/></span>
             </div>
