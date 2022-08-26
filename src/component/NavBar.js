@@ -35,27 +35,6 @@ const NavBar = ({logIn, setLogIn, setUserName, setPassword}) => {
             About
         </NavLink>
 
-        {logIn ?  
-            <>
-            <button className="navbar-btn" onClick={logOut}>Log out</button>
-            </> 
-            : 
-            <>
-            <NavLink
-                to="/signUp"
-                exact
-                className="navbar-btn"
-                >
-                Sign Up
-            </NavLink>
-            <NavLink
-                to="/login"
-                exact
-                className="navbar-btn"
-                >
-                Login
-            </NavLink>
-            </>}
         </div>
     </div>
   );

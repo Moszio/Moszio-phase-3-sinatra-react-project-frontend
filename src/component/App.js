@@ -27,13 +27,6 @@ const App = () => {
         <Route exact path="/about">
           <About />
         </Route>
-        <Route exact path="/login">
-          <Login setLogIn={setLogIn} logIn={logIn} userName={userName} setUserName={setUserName}
-          password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
-        </Route>
-        <Route exact path="/signUp">
-          <SignUp />
-        </Route>
         <Route exact path="/">
           <Home />
         </Route>
