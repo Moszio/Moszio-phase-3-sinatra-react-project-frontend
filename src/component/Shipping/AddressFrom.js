@@ -17,56 +17,56 @@ function AddressFrom({setAddressFrom, addressFrom}) {
 
   return (
     <div >
-    <form class="row">
+    <form className="row">
             
-            <div class="col-md-5">
-              <input type="text" class="form-control" name="firstNameFrom" value={addressFrom.firstNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">First Name</label>
+            <div className="col-md-5">
+              <input type="text" className="form-control" name="firstNameFrom" value={addressFrom.firstNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">First Name</label>
             </div>
             <div></div>
-            <div class="col-md-5">
-              <input type="text" class="form-control" name="lastNameFrom" value={addressFrom.lastNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">Last Name</label>
+            <div className="col-md-5">
+              <input type="text" className="form-control" name="lastNameFrom" value={addressFrom.lastNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">Last Name</label>
               <br></br>
               <br></br>
             </div>
             <div></div>
-            <div class="col-5">
+            <div className="col-5">
               <input type="tel" 
-           class="form-control" name="phoneNumberFrom" value={addressFrom.phoneNumberFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">Phone number</label>
+           className="form-control" name="phoneNumberFrom" value={addressFrom.phoneNumberFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">Phone number</label>
             </div>
             <div></div>
-            <div class="row"></div>
-            <div class="col-lg-5">
-              <input type="email" class="form-control" name="emailFrom" value={addressFrom.emailFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">Email</label>
+            <div className="row"></div>
+            <div className="col-lg-5">
+              <input type="email" className="form-control" name="emailFrom" value={addressFrom.emailFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">Email</label>
             </div>            
             <div></div>
-            <div class="col-md-5">
-              <input type="text" class="form-control" name="streetFrom"value={addressFrom.streetFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">Street</label>              
+            <div className="col-md-5">
+              <input type="text" className="form-control" name="streetFrom"value={addressFrom.streetFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">Street</label>              
             </div>
             <div></div>
-            <div class="col-lg-5">
-              <input type="text" class="form-control" name="cityFrom" value={addressFrom.cityFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label">City</label>
+            <div className="col-lg-5">
+              <input type="text" className="form-control" name="cityFrom" value={addressFrom.cityFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label">City</label>
             </div>
             <div></div>
-            <div class="row"></div>
-            <div class="col-md-4">
-              <select id="" class="form-select" name="StateFrom" value={addressFrom.StateFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} >
+            <div className="row"></div>
+            <div className="col-md-4">
+              <select id="" className="form-select" name="StateFrom" value={addressFrom.StateFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} >
                 <option value=""></option>
                 {states.map(state => (
                   <option value={state.name}>{state.name}</option>
                 ))}
               </select>
-              <label class="form-label">State</label>
+              <label className="form-label">State</label>
             </div>
             <div></div>
-            <div class="col-md-4">
-              <input maxlength="5"  class="form-control" name="zipFrom" value={addressFrom.zipFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
-              <label class="form-label" >Zip</label>
+            <div className="col-md-4">
+              <input maxlength="5"  className="form-control" name="zipFrom" value={addressFrom.zipFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
+              <label className="form-label" >Zip</label>
             </div>
         </form>
         </div>

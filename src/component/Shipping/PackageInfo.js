@@ -14,57 +14,56 @@ function PackageInfo({setBox, box}) {
 
 
   return (
-    <div className="d-flex justify-content-center" >
-    <form className="row">
-            <div class="col-md-5">
-              <select name="" id="" class="form-select" name="shippingMethod" value={box.shippingMethod} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
-                <option value=""></option>
-                <option value="">Very Slow</option>
-                <option value="">Slow</option>
-                <option value="">Fast</option>
-                <option value="">Fast & Furious</option>
+    <div classNameName="d-flex justify-content-center" >
+    <form classNameName="row">
+            <div className="col-md-5">
+              <select  className="form-select" name="shippingMethod" value={box.shippingMethod} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
+                <option value="Very Slow">Very Slow</option>
+                <option value="Slow">Slow</option>
+                <option value="Fast">Fast</option>
+                <option value="Fast & Furious">Fast & Furious</option>
               </select>
-              <label class="form-label">Shipping method</label>
+              <label className="form-label">Shipping method</label>
             </div>
-            <div class="row"></div>
-            <div class="col-md-5">
-              <label class="form-label">Dimension</label>
+            <div className="row"></div>
+            <div className="col-md-5">
+              <label className="form-label">Dimension</label>
 
             </div>
-            <div class="row"></div>
-            <div class="col-md-1">
-              <input type="text" class="form-control" name="dimensionL" value={box.dimensionL} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
-              <label class="form-label">L</label>
+            <div className="row"></div>
+            <div className="col-md-1">
+              <input type="text" className="form-control" name="dimensionL" value={box.dimensionL} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
+              <label className="form-label">L</label>
             </div>
-            <div class="col-md-1">
-              <input type="text" class="form-control" name="dimensionW" value={box.dimensionW} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
-              <label class="form-label">W</label>
+            <div className="col-md-1">
+              <input type="text" className="form-control" name="dimensionW" value={box.dimensionW} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
+              <label className="form-label">W</label>
             </div>
-            <div class="col-md-1">
-              <input type="text" class="form-control" name="dimensionH" value={box.dimensionH} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
-              <label class="form-label">H</label>
+            <div className="col-md-1">
+              <input type="text" className="form-control" name="dimensionH" value={box.dimensionH} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
+              <label className="form-label">H</label>
               
             </div>
-            <div class="row"></div>
-            <div class="col-5">
-              <input type="integer" class="form-control" name="weight" value={box.weight} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
-              <label class="form-label">Weight</label>
+            <div className="row"></div>
+            <div className="col-5">
+              <input type="integer" className="form-control" name="weight" value={box.weight} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}/>
+              <label className="form-label">Weight</label>
             </div>
-            <div class="row"></div>
-            <div class="col-lg-5">
-              <select name="" id="" class="form-select" name="deliveryConfirmation" value={box.deliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
+            <div className="row"></div>
+            <div className="col-lg-5">
+              <select id="" className="form-select" name="deliveryConfirmation" value={box.deliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
                 <option value="Email">Email</option>
                 <option value="SMS">SMS</option>
               </select>
-              <label class="form-label">Delivery confirmation</label>
+              <label className="form-label">Delivery confirmation</label>
             </div>            
-            <div class="row"></div>
-            <div class="col-md-5">
-              <select name="" id="" class="form-select" name="packageDeliveryConfirmation" value={box.packageDeliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
+            <div className="row"></div>
+            <div className="col-md-5">
+              <select  id="" className="form-select" name="packageDeliveryConfirmation" value={box.packageDeliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
               </select>
-              <label class="form-label">Proof of delivery (Recipient's signature)</label>            
+              <label className="form-label">Proof of delivery (Recipient's signature)</label>            
             </div>
         </form>
         </div>
