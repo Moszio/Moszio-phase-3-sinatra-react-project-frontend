@@ -123,6 +123,7 @@ form.edit-message input[type="button"]:hover {
 	right: 0;
 	bottom: 10px;
 	transition:ease-in;
+	z-index: 20;
 }
 
 .send-btn{
@@ -137,4 +138,12 @@ form.edit-message input[type="button"]:hover {
 }
 
 
-.message-edit-container{}
+.dropdown-header{
+	font-size: 20px;
+	cursor: pointer;
+}
+.dropdown-header:hover{
+		transform: scale(1.08);
+	background-color: #0d427a;
+}
+
