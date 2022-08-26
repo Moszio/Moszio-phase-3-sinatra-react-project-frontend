@@ -8,7 +8,7 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChat
     const history = useHistory()
 
     const clickToGoToHomepage = () => {
-         history.push("/")
+        history.push("/")
     }
 
     const logOut = () =>{
@@ -22,7 +22,7 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChat
         <div class="m-4">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <Link to="/" className="navbar-brand" >FFS Transportation</Link>
+                    <Link to="/" className="navbar-brand" ><div>FFS Logistics</div></Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -40,7 +40,7 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChat
                                     </ul>
                                     </div>
                                     
-                                    <Link to="/about" className="nav-item nav-link" id="About">Contact</Link>
+                                    <Link to="/contact" className="nav-item nav-link" id="About">Contact</Link>
                                     <Link to="/" className="nav-item nav-link" onClick={logOut}>Log out</Link>
 
 
@@ -51,8 +51,8 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChat
                                 <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
                                 
 
-                                <Link to="/about" className="nav-item nav-link active" id="Home">About</Link>
-                                <Link to="/contact" className="nav-item nav-link" id="About">Contact</Link>
+
+                                <Link to="/contact" className="nav-item nav-link" id="Contact">Contact</Link>
 
                                 <Link to="/signup" className="nav-item nav-link">Sign up</Link>
                                 <Link to="/login" className="nav-item nav-link">Log in</Link>

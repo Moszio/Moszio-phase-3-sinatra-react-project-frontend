@@ -14,9 +14,8 @@ function PackageInfo({setBox, box}) {
 
 
   return (
-    <div >
-    <form class="row">
-            
+    <div className="d-flex justify-content-center" >
+    <form className="row">
             <div class="col-md-5">
               <select name="" id="" class="form-select" name="shippingMethod" value={box.shippingMethod} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
                 <option value=""></option>
@@ -59,8 +58,8 @@ function PackageInfo({setBox, box}) {
               </select>
               <label class="form-label">Delivery confirmation</label>
             </div>            
-          
-            <div class="col-md-8">
+            <div class="row"></div>
+            <div class="col-md-5">
               <select name="" id="" class="form-select" name="packageDeliveryConfirmation" value={box.packageDeliveryConfirmation} onChange={(e) => setBox({...box, [e.target.name]:e.target.value})}>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>

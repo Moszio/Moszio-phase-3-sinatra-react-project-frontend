@@ -23,31 +23,36 @@ function AddressFrom({setAddressFrom, addressFrom}) {
               <input type="text" class="form-control" name="firstNameFrom" value={addressFrom.firstNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">First Name</label>
             </div>
+            <div></div>
             <div class="col-md-5">
               <input type="text" class="form-control" name="lastNameFrom" value={addressFrom.lastNameFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">Last Name</label>
               <br></br>
               <br></br>
             </div>
+            <div></div>
             <div class="col-5">
               <input type="tel" 
            class="form-control" name="phoneNumberFrom" value={addressFrom.phoneNumberFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">Phone number</label>
             </div>
+            <div></div>
             <div class="row"></div>
             <div class="col-lg-5">
               <input type="email" class="form-control" name="emailFrom" value={addressFrom.emailFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">Email</label>
             </div>            
-          
-            <div class="col-md-8">
+            <div></div>
+            <div class="col-md-5">
               <input type="text" class="form-control" name="streetFrom"value={addressFrom.streetFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">Street</label>              
             </div>
-            <div class="col-lg-8">
+            <div></div>
+            <div class="col-lg-5">
               <input type="text" class="form-control" name="cityFrom" value={addressFrom.cityFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label">City</label>
             </div>
+            <div></div>
             <div class="row"></div>
             <div class="col-md-4">
               <select id="" class="form-select" name="StateFrom" value={addressFrom.StateFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} >
@@ -58,6 +63,7 @@ function AddressFrom({setAddressFrom, addressFrom}) {
               </select>
               <label class="form-label">State</label>
             </div>
+            <div></div>
             <div class="col-md-4">
               <input maxlength="5"  class="form-control" name="zipFrom" value={addressFrom.zipFrom} onChange={(e) => setAddressFrom({...addressFrom, [e.target.name]:e.target.value})} required/>
               <label class="form-label" >Zip</label>

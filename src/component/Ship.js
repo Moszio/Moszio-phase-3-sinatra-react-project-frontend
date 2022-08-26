@@ -1,10 +1,14 @@
-import React, {useState, useRef } from 'react';
+import React, {useState, useRef, useEffect } from 'react';
 import { useReactToPrint } from 'react-to-print';
 
 import AddressFrom from './Shipping/AddressFrom'
 import AddressTo from './Shipping/AddressTo'
 import PackageInfo from './Shipping/PackageInfo'
 import Review from './Shipping/Review'
+
+
+
+
 
 
 
@@ -38,6 +42,7 @@ function Ship() {
     const componentRef = useRef()
     const handlePrint = useReactToPrint({
         content: () => (componentRef.current)
+        
 
     })
     
@@ -75,9 +80,21 @@ function Ship() {
     const[addressTo, setAddressTo]=useState(initialValuesTo)
     const[box, setBox]=useState(initialValuesPackageDetails)
     const[shipped, setShipped]=useState(false)
+
+    
     const sendPackage = ()=>{
         setShipped(true)
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     }
+        
+  
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
+
+ 
+
+
 
     return (
     <div className="form" style={{margin:"5%"}}>
@@ -87,10 +104,16 @@ function Ship() {
 
             { shipped ? 
             (   <>
-                <div className="">
+                <div className="d-flex justify-content-center">
                     <h4> You just shipped your package!</h4>
+                </div>
+                <div className="d-flex justify-content-center">
                     <button className="btn btn-primary form-control" onClick={handlePrint} style={{width:"12%", margin:'3%', backgroundColor:"green"}}>Print confirmation</button>
                 </div>
+                <div className="d-flex justify-content-center">
+                    <img style={{width:'40%'}} src='../../Logo.jpg'/>
+                </div>
+                
                 </>
             ):( <>             
                 <h1 style={{textAlign:'Center', marginBottom:"3%"}}>{steps[step]}</h1>

@@ -1,7 +1,9 @@
 import React from "react";
 
 const About = () => {
-  return <h1>This is my about component!</h1>;
+  return  
+  (<div className="d-flex justify-content-center"> </div>)  
+    
 }
 
 export default About;
