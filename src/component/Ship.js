@@ -6,14 +6,6 @@ import AddressTo from './Shipping/AddressTo'
 import PackageInfo from './Shipping/PackageInfo'
 import Review from './Shipping/Review'
 
-
-
-
-
-
-
-
-
 function Ship() {
     const[step, setStep]=useState(0)
     const steps = ["Where are you shipping from?", "Where are you shipping to?", "Package details", "Review information"]
@@ -24,9 +16,21 @@ function Ship() {
     }
 
     const handleNext =()=>{
-        if (step <= steps.length  ){
-            setStep(step+1)
+        if(step===0 && addressFrom.firstNameFrom && addressFrom.lastNameFrom && addressFrom.phoneNumberFrom && addressFrom.emailFrom
+            && addressFrom.streetFrom && addressFrom.cityFrom && addressFrom.StateFrom && addressFrom.zipFrom){
+            if (step <= steps.length  ){
+            setStep(step+1)}
         }
+        if(step ===1 && addressTo.firstNameTo && addressTo.lastNameTo && addressTo.phoneNumberTo && addressTo.emailTo && addressTo.streetTo &&addressTo.cityTo && addressTo.StateTo && addressTo.zipTo){
+            if (step <= steps.length  ){
+            setStep(step+1)}
+        }
+        if(step === 2 && box.shippingMethod && box.dimensionL && box.dimensionW && box.dimensionH && box.weight && box.deliveryConfirmation && box.packageDeliveryConfirmation ){
+            if (step <= steps.length  ){
+            setStep(step+1)}
+        } 
+        if (step ===3) {
+            setStep(step+1)}
     }
     const returnStep =() =>{
         if (step === 0){
@@ -42,7 +46,6 @@ function Ship() {
     const componentRef = useRef()
     const handlePrint = useReactToPrint({
         content: () => (componentRef.current)
-        
 
     })
     
@@ -55,7 +58,7 @@ function Ship() {
         streetFrom: "",
         cityFrom: '',
         StateFrom: "",
-        zipFrom: 0
+        zipFrom: null
     }
     const initialValuesTo = {
         firstNameTo:"",
@@ -65,7 +68,7 @@ function Ship() {
         streetTo: "",
         cityTo: '',
         StateTo: "",
-        zipTo: 0
+        zipTo: null
     }
     const initialValuesPackageDetails = {
         shippingMethod:"",

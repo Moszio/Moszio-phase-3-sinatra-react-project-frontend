@@ -22,7 +22,7 @@ const NavBar = ({logIn, setLogIn, setUserEmail, setPassword, openChat, setIsChat
         <div class="m-4">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <Link to="/" className="navbar-brand" ><div>FFS Logistics</div></Link>
+                    <Link to="/" className="navbar-brand" ><h1 style={{fontWeight: '900'}}>FFS Logistics</h1></Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
