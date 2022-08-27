@@ -1,5 +1,8 @@
 import React from "react";
 import MessageBox from "./messagebox/MessageBox";
+import UncontrolledExample from "./Carousel";
+import BasicExample from "./Cards";
+
 
 const Home = () => {
   return (
@@ -21,6 +24,36 @@ const Home = () => {
             </div>
         </div>
     </section>
+    <div className="home-main">
+        {<div className="home-page-section-2">
+            <div className="home-page-section-2-container">
+                <div className="home-page-section-1-hmp-message">
+                </div>
+                <div className="home-page-section-1-hmp-image">
+                    <img src="https://images.unsplash.com/photo-1592963219751-3800a144a41e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="" />
+                </div>
+            </div>
+        </div>}
+        <div >
+            <div className="carousel-container">
+                <UncontrolledExample />
+               
+            </div>
+        </div>
+        <div >
+          <div className="card-container">
+            <BasicExample/>
+            <BasicExample/>
+            <BasicExample/>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
   </>
 
   )
