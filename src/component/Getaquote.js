@@ -1,6 +1,5 @@
-import Form from 'react-bootstrap/Form';
 
-function FormDisabledInputExample() {
+function Getaquote() {
   return (
 
     <div className="container-fluid ps-md-0">
@@ -49,4 +48,4 @@ function FormDisabledInputExample() {
   );
 }
 
-export default FormDisabledInputExample;
+export default Getaquote;

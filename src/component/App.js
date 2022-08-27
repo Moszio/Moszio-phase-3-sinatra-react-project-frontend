@@ -5,10 +5,10 @@ import Home from "./Home";
 import About from "./About";
 import NavBar from "./NavBar";
 import Contact from './Contact'
-import FormDisabledInputExample from "./Getaquote";
+import Getaquote from "./Getaquote";
 import "./App.css"
-import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
+import Footer from "./Footer";
 
 
 
@@ -20,41 +20,23 @@ const App = () => {
   const[userEmail, setUserEmail]=useState('')
   const[password, setPassword]=useState('')
   const[newUser, setNewUser]=useState(false)
-  const[users, setUsers]=useState([])
-  const[userLogInName, setUserLogInName]=useState('')
-  const[isChatOpen, setIsChatOpen]=useState(false)
-  const[userConfirm, setUserConfirm]=useState({
-    name:"", 
-    lastName:""
-  })
 
-    const openChat = () =>{
-        setIsChatOpen(!isChatOpen)
-        console.log(userLogInName)
-    }
+
 
 
   return (
     <>
       <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser} openChat={openChat} setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen}/>
+          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser}/>
       <Switch>
         <Route exact path="/about">
           <About />
         </Route>
-        {/*<Route exact path="/login">
-          <Login setUserLogInName={setUserLogInName} users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser} userConfirm={userConfirm} setUserConfirm={setUserConfirm}/>
-        </Route>*/}
-        <Route exact path="/login">
-          <FormDisabledInputExample/>
+
+        <Route exact path="/quote">
+          <Getaquote/>
         </Route>
-        {/*<Route exact path="/ship">
-          <Ship />
-        </Route>
-        <Route exact path="/track">
-          <Track />
-        </Route>*/}
+        
         <Route exact path="/contact">
           <Contact />
         </Route>
@@ -63,7 +45,6 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-      
     </>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import UncontrolledExample from "./Carousel";
 import BasicExample from "./Cards";
-import { Link } from "react-router-dom";
+import Footer from "./Footer";
+
 
 const Home = () => {
   return (
@@ -19,13 +20,14 @@ const Home = () => {
             <BasicExample/>
           </div>
         </div>
+
         <section id="about-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col">
                     <img style={{width:'120%'}} src='../../Logo.jpg'/>
                 </div>
-                <div class="col text-col" style={{fontSize:'15px', fontWeight: "bold" ,fontFamily: 'Merriweather', letterSpacing: ".1rem"}} >
+                <div className="col text-col" style={{fontSize:'20px', fontWeight: "bold" ,fontFamily: 'Merriweather', letterSpacing: ".1rem"}} >
                     <p>Our company for the last few years ensures that all the materials and personnel are in the right place at the right time to help a project or a business objective be accomplished. We specialize in managing a wide range of items.
                     <br/>
                     <br/>
@@ -36,22 +38,7 @@ const Home = () => {
             </div>
         </div>
     </section>
-    <div class="text-center p-4">
-             <div className="footer">
-            <div className="footer-top">
-
-            </div>
-            <div className="footer-bottom">
-                                <>
-                                <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
-                                <Link to="/contact" className="nav-item nav-link" id="Contact">Contact</Link>
-                                <Link to="/about" className="nav-item nav-link">About</Link>
-                                <Link to="/login" className="nav-item nav-link">Log in</Link>
-                                </>
-            </div>
-            </div>
-        </div>
-        
+    <Footer />
     </div>
   )
 }
