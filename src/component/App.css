@@ -157,7 +157,7 @@ display:flex ;
 .carousel-container img{
   width: auto;
   height: 500px;
-  object-fit: contain;
+  object-fit:cover;
 }
 
 
@@ -169,4 +169,60 @@ display:flex ;
   margin-left: auto;
   margin-right: auto;
 
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+}
+
+.footer-top{
+  background-color: rgb(255, 135, 135);
+  width: 100%;
+  height: 100px;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+  background-color: rgb(190, 190, 255);
+  width: 100%;
+  height: 100px;
+  text-align: right;
+}
+
+
+
+/* VIDEO*/
+
+#fs-overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#header-img {
+  height: auto;
+  width: 65%;
+}
+
+
+.screen {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myVideo {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  object-fit: fill;
 }

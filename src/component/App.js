@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Login from "./Login";
 import NavBar from "./NavBar";
-import Footer from './Footer'
-import Ship from './Ship'
-import Track from './Track'
 import Contact from './Contact'
+import FormDisabledInputExample from "./Getaquote";
 import "./App.css"
 import SignUp from "./SignUp"
 import 'bootstrap/dist/css/bootstrap.min.css'  
@@ -45,19 +42,19 @@ const App = () => {
         <Route exact path="/about">
           <About />
         </Route>
-        <Route exact path="/login">
+        {/*<Route exact path="/login">
           <Login setUserLogInName={setUserLogInName} users={users} setUsers={setUsers} setLogIn={setLogIn} logIn={logIn} userEmail={userEmail} setUserEmail={setUserEmail}
           password={password} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser} userConfirm={userConfirm} setUserConfirm={setUserConfirm}/>
+        </Route>*/}
+        <Route exact path="/login">
+          <FormDisabledInputExample/>
         </Route>
-        <Route exact path="/signUp">
-          <SignUp setUsers={setUsers} users={users}/>
-        </Route>
-        <Route exact path="/ship">
+        {/*<Route exact path="/ship">
           <Ship />
         </Route>
         <Route exact path="/track">
           <Track />
-        </Route>
+        </Route>*/}
         <Route exact path="/contact">
           <Contact />
         </Route>
@@ -66,8 +63,7 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-      <Footer logIn={logIn} userLogInName={userLogInName} openChat={openChat} isChatOpen={isChatOpen}/>
-
+      
     </>
   );
 }

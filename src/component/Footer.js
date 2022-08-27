@@ -1,15 +1,23 @@
 import React, {useState} from "react";
-import { BsFillChatDotsFill } from 'react-icons/bs';
-import MessageBox from "./messagebox/MessageBox";
+import { Link } from "react-router-dom";
 
 const Footer = ({logIn, userLogInName,openChat,isChatOpen}) => {
   
     return (
-        <div class="text-center p-4" style={{position:"fixed",width:"100%", bottom: "0"}}>
-            {isChatOpen ? (<MessageBox userLogInName={userLogInName} openChat={openChat}/>) : <></> }
-            {logIn ? ( 
-                <BsFillChatDotsFill onClick={openChat} style={{float:"right"}} className="chatbubble" />
-            ):(<></>)}
+        <div class="text-center p-4" >
+             <div className="footer">
+            <div className="footer-top">
+
+            </div>
+            <div className="footer-bottom">
+                                <>
+                                <Link to="/" className="nav-item nav-link active" id="Home">Home</Link>
+                                <Link to="/contact" className="nav-item nav-link" id="Contact">Contact</Link>
+                                <Link to="/about" className="nav-item nav-link">About</Link>
+                                <Link to="/login" className="nav-item nav-link">Log in</Link>
+                                </>
+            </div>
+            </div>
         </div>
     )
 }

@@ -1,8 +1,15 @@
 import React from "react";
 
 const About = () => {
-  return  
-  (    <section id="about-us">
+  return <div>
+    {/*<div className='screen'>
+      <video autoPlay muted loop id="myVideo">
+      <source src="https://cdn.videvo.net/videvo_files/video/free/2019-02/large_watermarked/190111_09_BangkokPort_Drone_10_preview.mp4" type="video/mp4"/>
+      </video>
+    </div>*/}
+    
+    
+    <section id="about-us">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col">
@@ -18,8 +25,10 @@ const About = () => {
                 </div>
             </div>
         </div>
-    </section>
-    )  
+    </section> 
+    </div>
+
+  
     
 }
 
