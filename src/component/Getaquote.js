@@ -5,9 +5,6 @@ function FormDisabledInputExample() {
 
     <div className="container-fluid ps-md-0">
         
-                    <div className="row g-0">
-                       
-                        
                         <div className="login d-flex align-items-center py-5">
                             
                         <video autoPlay muted loop id="myVideo">
@@ -26,26 +23,19 @@ function FormDisabledInputExample() {
                             
                                 <form>
                                     <div className="form-floating mb-3">
-                                    <input type="text" className="form-control" id="floatingInput" placeholder="User email" />
-                                    <label htmlFor="floatingInput">Address email</label>
+                                    <input type="text" className="form-control" id="floatingInput" placeholder="Your Name*" />
+                                    <label htmlFor="floatingInput">Your Name*</label>
                                     </div>
                                     <div className="form-floating mb-3">
-                                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-                                    <label htmlFor="floatingPassword">Password</label>
+                                    <input type="password" className="form-control" id="floatingPassword" placeholder="Your email*" />
+                                    <label htmlFor="floatingPassword">Your email*</label>
                                     </div>
 
-                                    <div className="form-check mb-3">
-                                    <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck"/>
-                                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
-                                        Remember password
-                                    </label>
-                                    </div>
+                                
 
                                     <div className="d-grid">
-                                    <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Log in</button>
-                                    <div className="text-center">
-                                        <a className="small" href="#">Forgot password?</a>
-                                    </div>
+                                    <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Request a Quote</button>
+                                    
                                     </div>
 
                                 </form>
@@ -55,7 +45,7 @@ function FormDisabledInputExample() {
                         </div>
                         </div>
                     </div>
-                    </div>
+                   
   );
 }
 
