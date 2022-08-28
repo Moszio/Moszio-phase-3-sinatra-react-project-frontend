@@ -7,7 +7,7 @@ function Getaquote() {
                         <div className="login d-flex align-items-center py-5">
                             
                         <video autoPlay muted loop id="myVideo">
-                        <source src="https://cdn.videvo.net/videvo_files/video/free/2019-02/large_watermarked/190111_09_BangkokPort_Drone_10_preview.mp4" type="video/mp4"/>
+                        <source src="../../get_quote.mp4" type="video/mp4"/>
                         </video>
     
                             <div className="container">

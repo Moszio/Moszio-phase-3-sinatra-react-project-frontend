@@ -8,9 +8,9 @@ import {FaInstagram} from 'react-icons/fa'
 const Footer = () => {
   
     return (
-        <div class="footer-basic">
+        <div className="footer-basic">
         <footer>
-            <div class="social">
+            <div className="social">
                 <a href="#">
                 <FaFacebookSquare/>
                 </a>
@@ -21,14 +21,14 @@ const Footer = () => {
                 <FaInstagram/>
                 </a>
             </div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><Link to="/" className="nav-item nav-link active" id="Home">Home</Link></li>
-                <li class="list-inline-item"><Link to="/contact" className="nav-item nav-link" id="Contact">Contact</Link></li>
-                <li class="list-inline-item"><Link to="/about" className="nav-item nav-link">About</Link></li>
-                <li class="list-inline-item"><Link to="/quote" className="nav-item nav-link">Get a Quote</Link></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <ul className="list-inline">
+                <li className="list-inline-item"><Link to="/" className="nav-item nav-link active" id="Home">Home</Link></li>
+                <li className="list-inline-item"><Link to="/contact" className="nav-item nav-link" id="Contact">Contact</Link></li>
+                <li className="list-inline-item"><Link to="/about" className="nav-item nav-link">About</Link></li>
+                <li className="list-inline-item"><Link to="/quote" className="nav-item nav-link">Get a Quote</Link></li>
+                <li className="list-inline-item"><a href="#">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">FFS Logistics © 2022</p>
+            <p className="copyright">FFS Logistics © 2022</p>
         </footer>
     </div>
 

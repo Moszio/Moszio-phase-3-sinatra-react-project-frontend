@@ -1,5 +1,5 @@
 // src/components/App.js
-import React, { useState } from "react";
+
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -14,19 +14,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const App = () => {
-  const[logIn, setLogIn] = useState(false)
-  // use state used in Login Component
-  const[userEmail, setUserEmail]=useState('')
-  const[password, setPassword]=useState('')
-  const[newUser, setNewUser]=useState(false)
-
-
-
 
   return (
     <>
-      <NavBar logIn={logIn} setLogIn={setLogIn} userEmail={userEmail} setUserEmail={setUserEmail}
-          password={password} setPassword={setPassword} newUser={newUser}  setNewUser={setNewUser}/>
+      <div className="contact-top-nav">
+        <div>
+          <p><i className="fa-solid fa-phone-flip"></i> +8801683615582</p>
+        </div>
+        <div>
+          <p><i className="fa-solid fa-envelope"></i> nemanja@gmail.com</p>
+        </div>
+      </div>
+      <NavBar/>
       <Switch>
         <Route exact path="/about">
           <About />
