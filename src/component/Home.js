@@ -7,20 +7,17 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <div className="home-main">
-
         <div >
             <div className="carousel-container">
                 <UncontrolledExample />
             </div>
         </div>
         <div >
-          <div className="card-container">
-            <BasicExample/>
-            <BasicExample/>
+          <div>
             <BasicExample/>
           </div>
         </div>
-
+        <div className="section-off"></div>
         <section id="about-us">
         <div className="container">
             <div className="row align-items-center">

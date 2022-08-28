@@ -3,17 +3,92 @@ import Card from 'react-bootstrap/Card';
 
 function BasicExample() {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://images.unsplash.com/photo-1591528287637-f3d5eaa83a3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <div class='container-fluid'>
+        <div >
+            <div>
+                
+         
+            </div>
+            <div class="card-body">
+                <div class="row m-0 pt-5">
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-hand-holding-usd fa-3x"></i>
+                            <div class="card-title">
+                                RECHARGE REPEAT
+                                CUSTOMER
+                            </div>
+                            <p><small>Save customers' cards for future phone orders</small></p>
+                            <div class="learn-more">
+                                <p>
+                                    <small>
+                                        LEARN MORE
+                                        <label><i class="fas fa-angle-right"></i></label>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="far fa-handshake fa-3x"></i>
+                            <div class="card-title">
+                                ACCEPT ELECTRONIC
+                                CHECK
+                            </div>
+                            <p><small>Save customers' cards for future phone orders</small></p>
+                            <div class="learn-more">
+                                <p>
+                                    <small>
+                                        LEARN MORE
+                                        <label><i class="fas fa-angle-right"></i></label>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                            <div class="card-title">
+                                STREAMLINE PHONE
+                                PAYMENTS
+                            </div>
+                            <p><small>Save customers' cards for future phone orders</small></p>
+                            <div class="learn-more">
+                                <p>
+                                    <small>
+                                        LEARN MORE
+                                        <label><i class="fas fa-angle-right"></i></label>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-hourglass fa-3x"></i>
+                            <div class="card-title">
+                                SAVE<br />
+                                TIME
+                            </div>
+                            <p><small>Get a quote in just a few clicks</small></p>
+                            <div class="learn-more">
+                                <p>
+                                    <small>
+                                        LEARN MORE
+                                        <label><i class="fas fa-angle-right"></i></label>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            
+        </div>
   );
 }
 
