@@ -5,10 +5,6 @@ function BasicExample() {
   return (
     <div class='container-fluid'>
         <div >
-            <div>
-                
-         
-            </div>
             <div class="card-body">
                 <div class="row m-0 pt-5">
                     <div class="card col-12 col-md-3">

@@ -8,11 +8,11 @@ function Contact() {
     </div>
 
     <div className="d-flex justify-content-center">
-        <h2>https://github.com/Moszio</h2>
+       
     </div>
 
     <div className="d-flex justify-content-center">
-        <h2>https://github.com/AgnieszkaKr</h2>
+    
     </div>
     </>
   )

@@ -8,7 +8,6 @@ import Contact from './Contact'
 import Getaquote from "./Getaquote";
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css'  
-import Footer from "./Footer";
 
 
 

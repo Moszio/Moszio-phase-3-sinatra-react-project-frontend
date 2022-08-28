@@ -10,50 +10,21 @@
   --color-secondary: #616161;
   --color-white: #ffffff;
   --color-black: #000;
-  --colo-blue: #5e91cf;
+  --color-blue: #5e91cf;
 
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-#navbar-main-div {
-  background-color: rgb(242, 242, 242);
-  width: 100%;
-}
-
-.navbar {
-  display: flex;
-  background-color: black;
-  color: rgb(242, 242, 242);
-}
-
-.navbar-btn {
-  display: inline-block;
-  width: 50px;
-  padding: 12px;
-  border-radius: 10px;
-  margin: 6px 6px   ;
-  background: rgb(242, 242, 242);
-  text-decoration: none;
-  color: black;
-}
 
 
 
-.navbar-btn-container {
-  margin: auto 0 auto auto;
-}
 
-.navbar-company-name {
-  margin: auto auto auto 20px;
-  font-size: 30px;
-  font-weight: bold;
-}
 
 .navbar-company-logo{
   height: auto;
   width: 100px;
-  padding: 10px;
+  padding: 0px;
 }
 
 .home-main {
@@ -245,7 +216,7 @@
 }
 
 .learn-more {
-  color: #5e91cf;
+  color:  var(--color-blue);
 }
 
 .fa-angle-right {
@@ -253,7 +224,7 @@
 }
 
 .fa-3x {
-  color: #5e91cf;
+  color:  var(--color-blue);
 }
 
 .card-content {
@@ -268,9 +239,11 @@
 } 
 
 .card .col-12 .col-md-3:hover {
-  
+  transform:scale(1.08);
+  transition: all 0.4s ease-in-out;
 }
 
 #about-us {
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 15px var(--color-blue);
 }
+
