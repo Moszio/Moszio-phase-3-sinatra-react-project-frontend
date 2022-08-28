@@ -21,16 +21,22 @@ const Home = () => {
         <section id="about-us">
         <div className="container">
             <div className="row align-items-center">
+                <div></div>
                 <div className="col">
-                    <img style={{width:'120%'}} src='../../Logo.jpg'/>
+                 <img style={{width:'120%'}} src='../../Logo.jpg'/>
                 </div>
-                <div className="col text-col" style={{fontSize:'20px', fontWeight: "bold" ,fontFamily: 'Merriweather', letterSpacing: ".1rem"}} >
-                    <p>Our company for the last few years ensures that all the materials and personnel are in the right place at the right time to help a project or a business objective be accomplished. We specialize in managing a wide range of items.
-                    <br/>
-                    <br/>
-                    If you decide to use our service logistics process involves the integration of material handling, information flow, production, packaging, transportation, inventory, warehousing, and security.
-                    We have experienced staff who can help you by overseeing: purchasing, shipping and delivery, inventory, and warehousing. We use software systems to plan and monitor the movement of goods.
+                <div className="col text-col" style={{fontSize:'20px', letterSpacing: ".1rem"}} >
+                    <h2>Welcome to FFS Logistics</h2>
+                    <br />
+                    <p className="about-text-1">Why bother with those one-time headaches? Let White Star Logistics smooth your day, by de-stressing your workplace. That way you can focus on other areas to enhance your business.</p>
+                    <div>
+                    <div className="about-text-2-container"></div>
+                    <div className="about-text-2-line"></div>
+                    <p className="about-text-2">
+                    We offer logistics and transportation services to companies with varied needs—anything from dedicated services to last minute shipments. Our customer base encompasses industries such as food, beverage, produce, manufacturing, retail, recycling, and much more.
                     </p>
+                    <button className="about-us-btn">About us</button>
+                    </div>
                 </div>
             </div>
         </div>

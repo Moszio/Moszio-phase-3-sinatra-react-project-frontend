@@ -29,9 +29,10 @@ function Getaquote() {
                                     <input type="password" className="form-control" id="floatingPassword" placeholder="Your email*" />
                                     <label htmlFor="floatingPassword">Your email*</label>
                                     </div>
-
-                                
-
+                                    <div className="form-floating mb-3">
+                                    <textarea className="form-control" id="floatingInput" placeholder="Message*" />
+                                    <label htmlFor="floatingInput">Message*</label>
+                                    </div>
                                     <div className="d-grid">
                                     <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Request a Quote</button>
                                     

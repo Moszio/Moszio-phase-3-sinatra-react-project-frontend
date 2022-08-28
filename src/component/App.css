@@ -36,7 +36,7 @@
 
 
 .login {
-  min-height: 90vh;
+  min-height: 85vh;
 }
 
 .bg-image {
@@ -248,10 +248,50 @@
 }
 
 
-
-
+/*Contact*/
+#contact-page .card:hover i,#contact .card:hover h4{
+	color: var(--color-blue);
+  transform:scale(1.08);
+  transition: all 0.4s ease-in-out;
+}
 
 .map-location{
   height: 400px;
   width: 100%;
+}
+
+
+
+.about-text-2{
+  padding-left: 100px;
+
+}
+
+
+.about-text-2-line{
+  height: 5px;
+  background: linear-gradient(.25turn, red 10%, blue,white);
+  z-index: 10;
+}
+
+div .btn-primary{
+  background-color: var(--color-blue);
+}
+
+
+.about-us-btn{
+    height: 45px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color:var(--color-white);
+    background-color: var(--color-black);
+    cursor: pointer;
+    transition-duration: 0.1s;
+
+}
+
+.about-us-btn:hover {
+    transform: scale(1.1);
+    transition-duration: 0.8s;
 }
