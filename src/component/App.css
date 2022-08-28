@@ -247,3 +247,11 @@
   box-shadow: 0 3px 15px var(--color-blue);
 }
 
+
+
+
+
+.map-location{
+  height: 400px;
+  width: 100%;
+}
