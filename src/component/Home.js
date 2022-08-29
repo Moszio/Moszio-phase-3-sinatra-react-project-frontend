@@ -36,7 +36,7 @@ const Home = () => {
                     <p className="about-text-2">
                     We offer logistics and transportation services to companies with varied needs—anything from dedicated services to last minute shipments. Our customer base encompasses industries such as food, beverage, produce, manufacturing, retail, recycling, and much more.
                     </p>
-                    <button className="about-us-btn"><Link to="/about" className="nav-item nav-link">About</Link></button>
+                    <div className="about-us-btn"><button className="about-us-btn"><Link to="/about" className="nav-item nav-link">About</Link></button></div>
                     </div>
                 </div>
             </div>
