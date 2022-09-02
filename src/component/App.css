@@ -56,6 +56,10 @@
   background-position: center;
 }
 
+.bg-image-3{
+  background-image: url('../../public/Picture2.jpg');
+}
+
 .login-heading {
   font-weight: 300;
 }
@@ -273,7 +277,6 @@
 
 .about-text-2{
   padding-left: 100px;
-
 }
 
 
@@ -287,6 +290,11 @@ div .btn-primary{
   background-color: var(--color-blue);
 }
 
+.about-us-btn-container{
+  text-align: end;
+}
+
+
 
 .about-us-btn{
     height: 45px;
@@ -294,10 +302,10 @@ div .btn-primary{
     border: none;
     border-radius: 10px;
     color:var(--color-white);
-    background-color: var(--color-black);
+    background-color: var(--color-secondary);
     cursor: pointer;
     transition-duration: 0.1s;
-
+    padding: inherit;
 }
 
 .about-us-btn:hover {

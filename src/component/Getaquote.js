@@ -1,5 +1,24 @@
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 
 function Getaquote() {
+
+
+const form = useRef();
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+};
+
+
   return (
 
     <div className="container-fluid ps-md-0">
@@ -15,12 +34,8 @@ function Getaquote() {
                             <div className="row">
                                 
                                 <div className="col-md-9 col-lg-8 mx-auto">
-                                {/*signUpMessage ? (
-                                    <h3 className="login-heading mb-4">We can't find user name in our base. Please try one more time or sign up. </h3>
-                                    ):(
-                                    <h3 className="login-heading mb-4">Welcome back!</h3>) */}
                             
-                                <form>
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="form-floating mb-3">
                                     <input type="text" className="form-control" id="floatingInput" placeholder="Your Name*" />
                                     <label htmlFor="floatingInput">Your Name*</label>

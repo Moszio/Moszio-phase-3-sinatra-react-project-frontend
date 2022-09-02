@@ -8,7 +8,7 @@ import {FaInstagram} from 'react-icons/fa'
 const Footer = () => {
   
     return (
-        <div className="footer-basic">
+        <div className="footer-basic bg-light">
         <footer>
             <div className="social">
                 <a href="#">

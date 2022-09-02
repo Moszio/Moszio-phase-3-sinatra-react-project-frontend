@@ -16,6 +16,7 @@ const NavBar = () => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
+                    <Link to="/"> <img src="../../Picture2.jpg" alt="company-logo" style={{width: '100px'}}/></Link>
                     <Link to="/" className="navbar-brand" ><h1 style={{fontWeight: '900'}}>FFS Logistics</h1></Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>

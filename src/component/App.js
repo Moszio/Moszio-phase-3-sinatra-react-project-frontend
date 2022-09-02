@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      <div className="contact-top-nav">
+      <div className="contact-top-nav bg-light">
         <div>
           <p><i className="fa-solid fa-phone-flip"></i> +8801683615582</p>
         </div>
