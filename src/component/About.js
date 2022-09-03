@@ -9,7 +9,7 @@ const About = () => {
                     <img style={{width:'120%'}} src='../../Logo.jpg'/>
                 </div>
                 <div class="col text-col" style={{fontSize:'15px', fontWeight: "bold" ,fontFamily: 'Merriweather', letterSpacing: ".1rem"}} >
-                    <p>Our company for the last few years ensures that all the materials and personnel are in the right place at the right time to help a project or a business objective be accomplished. We specialize in managing a wide range of items.
+                    <p>Oura company for the last few years ensures that all the materials and personnel are in the right place at the right time to help a project or a business objective be accomplished. We specialize in managing a wide range of items.
                     <br/>
                     <br/>
                     If you decide to use our service logistics process involves the integration of material handling, information flow, production, packaging, transportation, inventory, warehousing, and security.
