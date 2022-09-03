@@ -10,7 +10,7 @@ const form = useRef();
 const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_jwq4k7s', 'template_wpe213i', form.current, 'csaTrSX49Eo0hAQao')
     .then((result) => {
         console.log(result.text);
     }, (error) => {
@@ -41,11 +41,11 @@ const sendEmail = (e) => {
                                     <label htmlFor="floatingInput">Your Name*</label>
                                     </div>
                                     <div className="form-floating mb-3">
-                                    <input type="password" className="form-control" id="floatingPassword" placeholder="Your email*" />
-                                    <label htmlFor="floatingPassword">Your email*</label>
+                                    <input type="email" className="form-control" id="floatingInput" placeholder="Your Email*" />
+                                    <label htmlFor="floatingInput">Your email*</label>
                                     </div>
                                     <div className="form-floating mb-3">
-                                    <textarea className="form-control" id="floatingInput" placeholder="Message*" />
+                                    <textarea className="form-control" name='message' id="floatingInput" placeholder="Message*" />
                                     <label htmlFor="floatingInput">Message*</label>
                                     </div>
                                     <div className="d-grid">
