@@ -15,15 +15,12 @@ https://unsplash.com/photos/mVqTumQH-c0?utm_source=unsplash&utm_medium=referral&
 US States
 npm i react-us-states
 
-###
-<<<<<<< HEAD
 print 
 npm install -s react-to-print
 
-=======
 for icons install:
 ### npm install react-icons --save
->>>>>>> Andor-cs-changes
+Andor-cs-changes
 
 
 
