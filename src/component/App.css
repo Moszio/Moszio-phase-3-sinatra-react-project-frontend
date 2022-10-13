@@ -40,7 +40,7 @@
 }
 
 .bg-image {
-  background-image: url('../../public/Logo.jpg');
+  background-image: url('../../public/Logo2.png');
 
   background-size: cover;
   background-position: center;
@@ -57,9 +57,9 @@
   background-size: cover;
   background-position: center;
 }
-/* .bg-image-video {
-  backg
-} */
+
+.card img {
+}
 
 .login-heading {
   font-weight: 300;

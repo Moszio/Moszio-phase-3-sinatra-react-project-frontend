@@ -2,21 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
-  /*const history = useHistory()
-
-    const clickToGoToHomepage = () => {
-        history.push("/")
-    }*/
-
   return (
     <div>
       <nav className='navbar navbar-expand-lg navbar-light bg-light'>
         <div className='container-fluid'>
           <Link to='/'>
             <img
-              src='../../Logo.jpg'
+              src='../../Logo2.png'
               alt='company-logo'
-              style={{ width: '100px' }}
+              style={{ width: '100px', backgroundColor: 'none' }}
             />
           </Link>
           <Link to='/' className='navbar-brand'>
