@@ -1,6 +1,6 @@
 import React from 'react'
 import UncontrolledExample from './Carousel'
-import BasicExample from './Cards'
+import Cards from './Cards'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import Previous from './Previous'
@@ -15,7 +15,7 @@ const Home = () => {
       </div>
       <div>
         <div>
-          <BasicExample />
+          <Cards />
         </div>
       </div>
       <div className='section-off'></div>
@@ -36,9 +36,9 @@ const Home = () => {
             >
               <h2>Welcome to FFS Logistics</h2>
               <br />
-              <p className='about-text-1'></p>
+              {/* <p className='about-text-1'></p> */}
               <div>
-                <div className='about-text-2-container'></div>
+                {/* <div className='about-text-2-container'></div> */}
                 <div className='about-text-2-line'></div>
                 <p className='about-text-2'>
                   We offer logistics and transportation services to companies
@@ -49,8 +49,8 @@ const Home = () => {
                 </p>
                 <div className='about-us-btn-container'>
                   <button className='about-us-btn'>
-                    <Link to='/about' className='nav-item nav-link'>
-                      About
+                    <Link to='/quote' className='nav-item nav-link'>
+                      Contact
                     </Link>
                   </button>
                 </div>

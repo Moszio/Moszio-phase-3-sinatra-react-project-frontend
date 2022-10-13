@@ -1,46 +1,47 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from 'react-bootstrap/Carousel'
 
 function UncontrolledExample() {
   return (
     <Carousel className='carousel-container'>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="../../ship.avif"
-          alt="First slide"
+          className='d-block w-100'
+          src='../../ship.avif'
+          alt='First slide'
         />
         <Carousel.Caption>
-          <h3>Logistics Freedom with <br/>continous improvement.</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>
+            Drayage services of dry and temperature controlled containers from
+            ports and rails.
+          </h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="../../truck.avif"
-          alt="Second slide"
+          className='d-block w-100'
+          src='../../truck.avif'
+          alt='Second slide'
         />
 
         <Carousel.Caption>
-          <h3>Everyday we work work hard to satisfy all of our customers.<br /> Wherever they may be.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>
+            Truckload services handled by our own 120 trucks + a netwrk of
+            reliable carriers.
+          </h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="../../handshake.avif"
-          alt="Third slide"
+          className='d-block w-100'
+          src='../../handshake.avif'
+          alt='Third slide'
         />
         <Carousel.Caption>
-          <h3>Relationships are at the core of everything we do.</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Specialized services like expedited, cross docking, etc.</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  );
+  )
 }
 
-export default UncontrolledExample;
+export default UncontrolledExample

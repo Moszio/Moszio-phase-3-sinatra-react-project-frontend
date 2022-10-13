@@ -293,4 +293,8 @@ div .btn-primary {
   .navbar-brand {
     display: none;
   }
+
+  .about-text-2 {
+    padding: 10px;
+  }
 }

@@ -42,9 +42,9 @@ const NavBar = () => {
                 <Link to='/contact' className='nav-item nav-link' id='Contact'>
                   Contact
                 </Link>
-                <Link to='/about' className='nav-item nav-link'>
+                {/* <Link to='/about' className='nav-item nav-link'>
                   About
-                </Link>
+                </Link> */}
                 <Link to='/quote' className='nav-item nav-link'>
                   Get a Quote
                 </Link>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from './Footer'
-import Getaquote from './Getaquote'
 
 function Contact() {
   return (
@@ -10,9 +9,8 @@ function Contact() {
           <div className='container'>
             <h3 className='text-center text-uppercase'>contact us</h3>
             <p className='text-center w-75 m-auto'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              interdum purus at sem ornare sodales. Morbi leo nulla, pharetra
-              vel felis nec, ullamcorper condimentum quam.
+              Want to get in touch? We'd love to hear from you. Here's how you
+              can reach us...
             </p>
             <div className='row'>
               <div className='col-sm-12 col-md-6 col-lg-4 my-5'>
@@ -59,16 +57,6 @@ function Contact() {
             </div>
           </div>
         </section>
-
-        {/* <div>
-          <iframe
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94264.96076118188!2d19.219130241016845!3d42.41112902570051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134de8079606867d%3A0x6bf78a76ea588ae9!2sPodgorica%2C%20Montenegro!5e0!3m2!1sen!2sus!4v1661688204326!5m2!1sen!2sus'
-            frameBorder='0'
-            className='map-location'
-            referrerPolicy='no-referrer-when-downgrade'
-            title='GoogleMaps'
-          ></iframe>
-        </div> */}
         <Footer />
       </div>
     </>

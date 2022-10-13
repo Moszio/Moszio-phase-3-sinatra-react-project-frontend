@@ -2,7 +2,6 @@
 
 import { Route, Switch } from 'react-router-dom'
 import Home from './Home'
-import About from './About'
 import NavBar from './NavBar'
 import Contact from './Contact'
 import Getaquote from './Getaquote'
@@ -26,10 +25,6 @@ const App = () => {
       </div>
       <NavBar />
       <Switch>
-        <Route exact path='/about'>
-          <About />
-        </Route>
-
         <Route exact path='/quote'>
           <Getaquote />
         </Route>
