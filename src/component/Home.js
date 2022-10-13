@@ -3,6 +3,7 @@ import UncontrolledExample from './Carousel'
 import BasicExample from './Cards'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
+import Previous from './Previous'
 
 const Home = () => {
   return (
@@ -35,12 +36,7 @@ const Home = () => {
             >
               <h2>Welcome to FFS Logistics</h2>
               <br />
-              <p className='about-text-1'>
-                FFS Logistics Inc provides tailored logistics and transportation
-                services and is committed to providing our customers with 100%
-                satisfaction both pn On-Time delivery and
-                customer-communication.
-              </p>
+              <p className='about-text-1'></p>
               <div>
                 <div className='about-text-2-container'></div>
                 <div className='about-text-2-line'></div>
@@ -63,6 +59,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Previous />
       <Footer />
     </div>
   )
