@@ -38,14 +38,11 @@ function Getaquote() {
   }
 
   return (
-    <div className='container-fluid ps-md-0'>
-      {/* <video autoPlay muted loop id='myVideo'>
-        <source src='../../get_quote.mp4' type='video/mp4' />
-      </video> */}
+    <div className='container-fluid ps-md-0 bg-image-3'>
       <div className='login d-flex align-items-center py-5'>
-        <video autoPlay muted loop id='myVideo'>
+        {/* <video autoPlay muted loop id='myVideo'>
           <source src='../../get_quote.mp4' type='video/mp4' />
-        </video>
+        </video> */}
 
         <div className='container'>
           <div className='row'>

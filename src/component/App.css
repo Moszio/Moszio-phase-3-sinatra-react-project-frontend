@@ -40,7 +40,7 @@
 }
 
 .bg-image {
-  background-image: url('../../public/Picture2.jpg');
+  background-image: url('../../public/Logo.jpg');
 
   background-size: cover;
   background-position: center;
@@ -53,7 +53,9 @@
 }
 
 .bg-image-3 {
-  background-image: url('../../public/Picture2.jpg');
+  background-image: url('../../public/agree.jpg');
+  background-size: cover;
+  background-position: center;
 }
 /* .bg-image-video {
   backg

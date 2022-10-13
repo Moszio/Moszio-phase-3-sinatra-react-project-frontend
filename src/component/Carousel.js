@@ -4,11 +4,7 @@ function UncontrolledExample() {
   return (
     <Carousel className='carousel-container'>
       <Carousel.Item>
-        <img
-          className='d-block w-100'
-          src='../../ship.avif'
-          alt='First slide'
-        />
+        <img className='d-block w-100' src='../../Ship.jpg' alt='First slide' />
         <Carousel.Caption>
           <h3>
             Drayage services of dry and temperature controlled containers from
@@ -19,7 +15,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className='d-block w-100'
-          src='../../truck.avif'
+          src='../../Truck.jpg'
           alt='Second slide'
         />
 
@@ -33,7 +29,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className='d-block w-100'
-          src='../../handshake.avif'
+          src='../../People.jpg'
           alt='Third slide'
         />
         <Carousel.Caption>
