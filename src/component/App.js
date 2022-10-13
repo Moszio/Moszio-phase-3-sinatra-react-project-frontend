@@ -1,50 +1,49 @@
 // src/components/App.js
 
-import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import NavBar from "./NavBar";
+import { Route, Switch } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import NavBar from './NavBar'
 import Contact from './Contact'
-import Getaquote from "./Getaquote";
-import "./App.css"
-import 'bootstrap/dist/css/bootstrap.min.css'  
-
-
-
-
+import Getaquote from './Getaquote'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
-
   return (
     <>
-      <div className="contact-top-nav bg-light">
+      <div className='contact-top-nav bg-light'>
         <div>
-          <p><i className="fa-solid fa-phone-flip"></i> +8801683615582</p>
+          <div>
+            <i className='fa-solid fa-phone-flip'></i> 630-586-6332
+          </div>
         </div>
         <div>
-          <p><i className="fa-solid fa-envelope"></i> nemanja@gmail.com</p>
+          <div>
+            <i className='fa-solid fa-envelope'></i> nemanja@gmail.com
+          </div>
         </div>
       </div>
-      <NavBar/>
+      <NavBar />
       <Switch>
-        <Route exact path="/about">
+        <Route exact path='/about'>
           <About />
         </Route>
 
-        <Route exact path="/quote">
-          <Getaquote/>
+        <Route exact path='/quote'>
+          <Getaquote />
         </Route>
-        
-        <Route exact path="/contact">
+
+        <Route exact path='/contact'>
           <Contact />
         </Route>
 
-        <Route exact path="/">
+        <Route exact path='/'>
           <Home />
         </Route>
       </Switch>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
