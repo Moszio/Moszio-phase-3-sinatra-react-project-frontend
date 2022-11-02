@@ -34,7 +34,7 @@ function Contact() {
                       className='fa fa-map-marker fa-5x mb-3'
                       aria-hidden='true'
                     ></i>
-                    <h4 className='text-uppercase mb-5'>office loaction</h4>
+                    <h4 className='text-uppercase mb-5'>office location</h4>
                     <address>
                       13769 Main Street, <br /> Suite 107, <br /> Lemont, IL
                       60439{' '}

@@ -21,7 +21,7 @@ function UncontrolledExample() {
 
         <Carousel.Caption>
           <h3>
-            Truckload services handled by our own 120 trucks + a netwrk of
+            Truckload services handled by our own 120 trucks + a network of
             reliable carriers.
           </h3>
         </Carousel.Caption>
